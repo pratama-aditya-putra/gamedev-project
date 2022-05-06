@@ -72,13 +72,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.cinemachine": {
-      "version": "2.6.3",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collab-proxy": {
       "version": "1.15.7",
       "depth": 0,
@@ -91,7 +84,7 @@
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
