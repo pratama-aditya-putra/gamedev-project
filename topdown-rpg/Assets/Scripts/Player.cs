@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        boxCollider.size = new Vector2(0.09732852f, 0.1191749f);
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         //Reset Move Delta
