@@ -8,13 +8,11 @@ public class Chest : Colletible
     public int pesoAmount = 10;
     protected override void OnCollect()
     {
-
         if (!collected)
         {
             collected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
+            Debug.Log("Grant " + pesoAmount + " Pesos");
         }
-        base.OnCollect();
-        Debug.Log("Grant Pesos");
     }
 }
