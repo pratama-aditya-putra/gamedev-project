@@ -19,6 +19,10 @@ public class JakaController : MonoBehaviour
     float horizontal;
     float vertical;
 
+    private BoxCollider2D boxCollider;
+    private Vector3 moveDelta;
+    private RaycastHit2D hit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +49,18 @@ public class JakaController : MonoBehaviour
         Vector2 position = rigidbody2d.position;
         position.x += speed * horizontal * Time.deltaTime;
         position.y += speed * vertical * Time.deltaTime;
-        
+
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        //Reset Move Delta
+        moveDelta = new Vector3(x, y, 0);
+
+        //Rotate sprite to direction
+        if (moveDelta.x > 0)
+            transform.localScale = Vector3.one;
+        else if (moveDelta.x < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+
         rigidbody2d.MovePosition(position);
     }
 
