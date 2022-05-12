@@ -29,14 +29,17 @@ public class GameManager : MonoBehaviour
     public Player player;
     //public Weapon weapon;
 
+    public FloatingTextManager floatingTextManager;
+
+    //Floating text manager
+    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    {
+        floatingTextManager.Show(msg,  fontSize,  color,  position,  motion,  duration);
+    }
+
     //Logic
     public int peso;
     public int experience;
-
-    public void addPeso(int x)
-    {
-        peso += x;
-    }
 
     public void SaveState()
     {
