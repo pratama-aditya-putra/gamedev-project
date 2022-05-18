@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
+        Application.targetFrameRate = 60;
     }
 
     //Resources
