@@ -23,9 +23,15 @@ public class Mover : Fighter
 
         //Rotate sprite to direction
         if (moveDelta.x > 0)
-            transform.localScale = new Vector3(-1, 1, 1);
-        else if (moveDelta.x < 0)
             transform.localScale = Vector3.one;
+        else if (moveDelta.x < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+
+        //Add push vector
+        moveDelta += pushDirection;
+
+        //Reduce push force based from recovery speed
+        pushDirection = Vector3.Lerp(pushDirection,Vector3.zero,pushRecoverySpeed);
 
         //Making sure we can move in this direction, by casting a box there first, if the box return null then we can move 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));

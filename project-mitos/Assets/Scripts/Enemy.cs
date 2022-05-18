@@ -8,8 +8,8 @@ public class Enemy : Mover
     public int xpValue = 1;
 
     //Logic
-    public float triggerRange = 0.5f;
-    public float chaseLength = 5;
+    public float triggerRange = 0.3f;
+    public float chaseLength = 1.0f;
 
     private bool chasing;
     private bool collidingWithPlayer;
