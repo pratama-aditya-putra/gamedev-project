@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4018074224661003100
-    second: Atlas_0
+    second: wall0
   - first:
       213: -4869357254534750094
     second: Atlas_1
@@ -49,31 +49,31 @@ TextureImporter:
     second: Atlas_14
   - first:
       213: -9198928466637730507
-    second: Atlas_15
+    second: torch0
   - first:
       213: 3823991837180300354
     second: Atlas_16
   - first:
       213: -1291705123832498677
-    second: Atlas_17
+    second: torch2
   - first:
       213: 7182614658172301277
-    second: Atlas_18
+    second: torch3
   - first:
       213: -8369517905372312421
-    second: Atlas_19
+    second: torch4
   - first:
       213: -9106852675655700425
-    second: Atlas_20
+    second: torch5
   - first:
       213: 745968338076216934
-    second: Atlas_21
+    second: torch6
   - first:
       213: -2834699621007424056
-    second: Atlas_22
+    second: torch7
   - first:
       213: -2217874986795218178
-    second: Atlas_23
+    second: torch8
   - first:
       213: 2748396297729853354
     second: Atlas_24
@@ -85,7 +85,7 @@ TextureImporter:
     second: Atlas_26
   - first:
       213: 7029400602700474323
-    second: Atlas_27
+    second: chest1
   - first:
       213: 4355180666568580090
     second: Atlas_28
@@ -157,115 +157,115 @@ TextureImporter:
     second: Atlas_50
   - first:
       213: -2386295036631077607
-    second: Atlas_51
+    second: wall1
   - first:
       213: -6613792370922084840
-    second: Atlas_52
+    second: wall2
   - first:
       213: -1988828135353101337
-    second: Atlas_53
+    second: wall3
   - first:
       213: 4971049064686688367
-    second: Atlas_54
+    second: wall
   - first:
       213: 4204374477710404856
-    second: Atlas_55
+    second: wall5
   - first:
       213: -3149050133103254212
-    second: Atlas_56
+    second: wall6
   - first:
       213: -5574873882498854606
-    second: Atlas_57
+    second: wall7
   - first:
       213: -9052792337493064725
-    second: Atlas_58
+    second: wall8
   - first:
       213: -7870807981238829915
-    second: Atlas_59
+    second: healing-fountain0
   - first:
       213: -7548257428066557718
-    second: Atlas_60
+    second: healing-fountain1
   - first:
       213: 3059076114534577413
-    second: Atlas_61
+    second: healing-fountain2
   - first:
       213: 5330871289308464701
-    second: Atlas_62
+    second: stained-floor0
   - first:
       213: -69871916218363647
-    second: Atlas_63
+    second: stained-floor1
   - first:
       213: 1839998147110866507
-    second: Atlas_64
+    second: stained-floor2
   - first:
       213: -8143584818952536569
-    second: Atlas_65
+    second: stained-floor3
   - first:
       213: 4289113178680934050
-    second: Atlas_66
+    second: stained-floor4
   - first:
       213: 4564897580977227239
-    second: Atlas_67
+    second: stained-floor5
   - first:
       213: 7555821830959073814
-    second: Atlas_68
+    second: stained-floor6
   - first:
       213: -6190716609726613716
-    second: Atlas_69
+    second: stained-floor7
   - first:
       213: 4873919324978898756
-    second: Atlas_70
+    second: stained-floor8
   - first:
       213: 310630301815266069
-    second: Atlas_71
+    second: stained-floor9
   - first:
       213: 703316215228858992
-    second: Atlas_72
+    second: stained-floor10
   - first:
       213: -5206644523654691916
-    second: Atlas_73
+    second: stained-floor11
   - first:
       213: 6582207593987013538
-    second: Atlas_74
+    second: floor0
   - first:
       213: 2114176695594709982
-    second: Atlas_75
+    second: floor1
   - first:
       213: 2489748775411591063
-    second: Atlas_76
+    second: torch1
   - first:
       213: 9048021198963646631
-    second: Atlas_77
+    second: enemy0
   - first:
       213: -1655761581076612383
-    second: Atlas_78
+    second: crates0
   - first:
       213: -5657005582927067749
-    second: Atlas_79
+    second: crates1
   - first:
       213: 2896179404482671487
-    second: Atlas_80
+    second: crates2
   - first:
       213: 2526274175933715322
-    second: Atlas_81
+    second: crates3
   - first:
       213: 2495676471409746333
-    second: Atlas_82
+    second: stairs0
   - first:
       213: -8316447183620893927
-    second: Atlas_83
+    second: stairs1
   - first:
       213: -7013733424125015739
-    second: Atlas_84
+    second: stairs2
   - first:
       213: -3040026052974905139
-    second: Atlas_85
+    second: stairs3
   - first:
       213: -22031193460720863
-    second: Atlas_86
+    second: chest0
   - first:
       213: 6650110119159395926
-    second: Atlas_87
+    second: menu0
   - first:
       213: -2512490208455336206
     second: Atlas_88
@@ -829,15 +829,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Atlas_0
+      name: wall0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 146
-        height: 208
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4363944}
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1144,13 +1144,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_15
+      name: torch0
       rect:
         serializedVersion: 2
-        x: 120
-        y: 112
-        width: 136
-        height: 80
+        x: 116
+        y: 82
+        width: 8
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1186,7 +1186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_17
+      name: torch2
       rect:
         serializedVersion: 2
         x: 148
@@ -1207,7 +1207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_18
+      name: torch3
       rect:
         serializedVersion: 2
         x: 164
@@ -1228,7 +1228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_19
+      name: torch4
       rect:
         serializedVersion: 2
         x: 180
@@ -1249,7 +1249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_20
+      name: torch5
       rect:
         serializedVersion: 2
         x: 196
@@ -1270,7 +1270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_21
+      name: torch6
       rect:
         serializedVersion: 2
         x: 212
@@ -1291,7 +1291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_22
+      name: torch7
       rect:
         serializedVersion: 2
         x: 228
@@ -1312,7 +1312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_23
+      name: torch8
       rect:
         serializedVersion: 2
         x: 244
@@ -1396,13 +1396,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_27
+      name: chest1
       rect:
         serializedVersion: 2
-        x: 208
+        x: 224
         y: 32
-        width: 48
-        height: 46
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1895,6 +1895,783 @@ TextureImporter:
       bones: []
       spriteID: f7251f4cf3fbc5ca0800000000000000
       internalID: -6026731920720571777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91da35cae4d22eed0800000000000000
+      internalID: -2386295036631077607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816200941e61734a0800000000000000
+      internalID: -6613792370922084840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3d9f029534664e0800000000000000
+      internalID: -1988828135353101337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6810bd59c6bcf440800000000000000
+      internalID: 4971049064686688367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fca5aecf40f85a30800000000000000
+      internalID: 4204374477710404856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35eb7c96935c44d0800000000000000
+      internalID: -3149050133103254212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2319d06adb112a2b0800000000000000
+      internalID: -5574873882498854606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3095235550e5280800000000000000
+      internalID: -9052792337493064725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing-fountain0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac33f6a7d545c290800000000000000
+      internalID: -7870807981238829915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing-fountain1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0a3ee8cd33f3790800000000000000
+      internalID: -7548257428066557718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing-fountain2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50537bbb485047a20800000000000000
+      internalID: 3059076114534577413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d364f86813f0bf940800000000000000
+      internalID: 5330871289308464701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1015706ccd3c70ff0800000000000000
+      internalID: -69871916218363647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e8be9e09cf88910800000000000000
+      internalID: 1839998147110866507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ef114f0cc2cfe80800000000000000
+      internalID: -8143584818952536569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae39b816bdf58b30800000000000000
+      internalID: 4289113178680934050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5003ef926c95f30800000000000000
+      internalID: 4564897580977227239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a057c3cebabd860800000000000000
+      internalID: 7555821830959073814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2772241b08261aa0800000000000000
+      internalID: -6190716609726613716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447674d8dc3a3a340800000000000000
+      internalID: 4873919324978898756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bdb2c1d949f4400800000000000000
+      internalID: 310630301815266069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0720d751f5ea2c900800000000000000
+      internalID: 703316215228858992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stained-floor11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b344d744684eb7b0800000000000000
+      internalID: -5206644523654691916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab7975cee2b85b50800000000000000
+      internalID: 6582207593987013538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3f455d080175d10800000000000000
+      internalID: 2114176695594709982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torch1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 82
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7972f5ae15d5d8220800000000000000
+      internalID: 2489748775411591063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0ae6c8757019d70800000000000000
+      internalID: 9048021198963646631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crates0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea70375d9d8509e0800000000000000
+      internalID: -1655761581076612383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crates1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b950b39f4674e71b0800000000000000
+      internalID: -5657005582927067749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crates2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73fdf1e2db413820800000000000000
+      internalID: 2896179404482671487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crates3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7395cd6af02f0320800000000000000
+      internalID: 2526274175933715322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 225
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91ada0378c62a220800000000000000
+      internalID: 2495676471409746333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 209
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9139af2595b069c80800000000000000
+      internalID: -8316447183620893927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 225
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5498eb17c963aae90800000000000000
+      internalID: -7013733424125015739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 209
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc87f7c5968afc5d0800000000000000
+      internalID: -3040026052974905139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bbbcb0fbab1bff0800000000000000
+      internalID: -22031193460720863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656f9b96befe94c50800000000000000
+      internalID: 6650110119159395926
       vertices: []
       indices: 
       edges: []

@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
-        Application.targetFrameRate = 60;
     }
 
     //Resources
@@ -28,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     //References
     public Player player;
-    //public Weapon weapon;
+    public Weapon weapon;
 
     public FloatingTextManager floatingTextManager;
 
@@ -36,6 +35,22 @@ public class GameManager : MonoBehaviour
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg,  fontSize,  color,  position,  motion,  duration);
+    }
+
+    //Try update weapon
+    public bool TryUpdateWeapon()
+    {
+        //Is weapon is the max level?
+        if(weaponPrices.Count <= weapon.weaponLevel)
+            return false;
+        if (peso >= weaponPrices[weapon.weaponLevel])
+        {
+            peso -= weaponPrices[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+
+        return false;
     }
 
     //Logic

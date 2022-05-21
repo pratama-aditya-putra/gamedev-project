@@ -28,8 +28,7 @@ public class Player : Mover
             lookDirection.Normalize();
         }
 
-        animator.SetFloat("Look X", lookDirection.x);
-        animator.SetFloat("Look Y", lookDirection.y);
+        animator.SetFloat("Move X", lookDirection.x);
         animator.SetFloat("Speed", move.magnitude);
     }
     private void FixedUpdate()
