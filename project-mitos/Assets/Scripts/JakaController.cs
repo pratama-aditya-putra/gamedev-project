@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JakaController : MonoBehaviour
 {
@@ -22,12 +23,15 @@ public class JakaController : MonoBehaviour
     Animator animator;
     Vector2 lookDirection = new Vector2(1,0);
 
-    private BoxCollider2D boxCollider;
-    private Vector3 moveDelta;
-    private RaycastHit2D hit;
-
     public GameObject projectilePrefab;
+    public GameObject crosshair;
 
+    public float CROSSHAIR_DISTANCE = 1.0f;
+
+    public int numOfHearts;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +70,38 @@ public class JakaController : MonoBehaviour
         {
             Launch();
         }
+
+        Aim();
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if(i < health)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeart;
+            }
+
+            if(i < numOfHearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            if (hit.collider != null)
+            {
+                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+            }
+        }
     }
 
     void FixedUpdate()
@@ -76,14 +112,14 @@ public class JakaController : MonoBehaviour
 
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        //Reset Move Delta
+        /*//Reset Move Delta
         moveDelta = new Vector3(x, y, 0);
 
         //Rotate sprite to direction
         if (moveDelta.x > 0)
             transform.localScale = Vector3.one;
         else if (moveDelta.x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);*/
 
         rigidbody2d.MovePosition(position);
     }
@@ -105,11 +141,22 @@ public class JakaController : MonoBehaviour
 
     void Launch()
     {
+        Vector2 shootingDirection = crosshair.transform.localPosition;
+
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position - Vector2.up * 0.5f, Quaternion.identity);
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
         projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
+    }
+
+    void Aim()
+    {
+        if(lookDirection != Vector2.zero)
+        {
+            crosshair.transform.localPosition = lookDirection * CROSSHAIR_DISTANCE;
+        }
     }
 }
