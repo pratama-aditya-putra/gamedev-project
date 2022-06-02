@@ -57,16 +57,35 @@ public class CharacterMenu : MonoBehaviour
     public void UpdateMenu()
     {
         //Weapon
-        weaponSprite.sprite = GameManager.instance.weaponSprites[0];
-        upgradeCost.text = "NOT IMPLEMENTED";
+        weaponSprite.sprite = GameManager.instance.weaponSprites[GameManager.instance.weapon.weaponLevel];
+        if (GameManager.instance.weapon.weaponLevel == GameManager.instance.weaponPrices.Count)
+            upgradeCost.text = "MAX";
+        else
+            upgradeCost.text = GameManager.instance.weaponPrices[GameManager.instance.weapon.weaponLevel].ToString();
 
         //Meta
-        levelText.text = "NOT IMPLEMENTED";
+        levelText.text = GameManager.instance.GetCurrentLevel().ToString();
         hitpointText.text = GameManager.instance.player.hitPoints.ToString();
         pesosText.text = GameManager.instance.peso.ToString();
 
         //Xp bar
-        xpText.text = "NOT IMPLEMENTED";
-        xpBar.localScale = new Vector3(0.8f, 1, 1);
+        int currLevel = GameManager.instance.GetCurrentLevel();
+        if (currLevel == GameManager.instance.expTable.Count)
+        {
+            xpText.text = GameManager.instance.experience.ToString() + " Total experience points!"; // Display total xp
+            xpBar.localScale = Vector3.one;
+        }
+        else
+        {   
+            int prevLevelXp = GameManager.instance.GetXptoLevel(currLevel - 1);
+            int currLevelXp = GameManager.instance.GetXptoLevel(currLevel);
+
+            int diff = currLevelXp - prevLevelXp;
+            int currXpIntoLevel = GameManager.instance.experience - prevLevelXp;
+
+            float completionRatio = (float)currXpIntoLevel / (float)diff;
+            xpBar.localScale = new Vector3(completionRatio, 1, 1);
+            xpText.text = currXpIntoLevel + " / " + diff;
+        } 
     }
 }

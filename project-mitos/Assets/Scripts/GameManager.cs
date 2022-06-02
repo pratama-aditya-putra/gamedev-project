@@ -12,11 +12,15 @@ public class GameManager : MonoBehaviour
         if(GameManager.instance != null)
         {
             Destroy(gameObject);
+            Destroy(player.gameObject);
+            Destroy(floatingTextManager.gameObject);
+            Destroy(hud);
+            Destroy(menu);
             return;
         }
         instance = this;
         SceneManager.sceneLoaded += LoadState;
-        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     //Resources
@@ -28,8 +32,11 @@ public class GameManager : MonoBehaviour
     //References
     public Player player;
     public Weapon weapon;
-
+    public Animator deathMenuAnim;
     public FloatingTextManager floatingTextManager;
+    public RectTransform hitPointBar;
+    public GameObject hud;
+    public GameObject menu;
 
     //Floating text manager
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -47,15 +54,85 @@ public class GameManager : MonoBehaviour
         {
             peso -= weaponPrices[weapon.weaponLevel];
             weapon.UpgradeWeapon();
+            Debug.Log("Berhasil upgrade senjata");
             return true;
         }
 
         return false;
     }
 
+    //Hitpoint bar
+    public void OnHitPointChange()
+    {
+        float ratio = (float)player.hitPoints / (float)player.maxHitpoints;
+        hitPointBar.localScale = new Vector3(ratio,1,1);
+    }
+
+
+    public int GetCurrentLevel()
+    {
+        int r = 0;
+        int add = 0;
+        
+        while (experience >= add)
+        {
+            add += expTable[r];
+            r++;
+
+            if(r == expTable.Count)//Max level
+            {
+                return r;
+            }
+        }
+
+        return r;
+    }
+
+    public int GetXptoLevel(int level)
+    {
+        int r = 0;
+        int xp = 0;
+        while (r < level)
+        {
+            xp += expTable[r];
+            r++;
+        }
+
+        return xp;
+    }
+
+    public void GrantXp(int xp)
+    {
+        int currentLevel = GetCurrentLevel();
+        experience += xp;
+        if(currentLevel < GetCurrentLevel())
+        {
+            OnLevelUp();
+        }
+    }
+
+    public void OnLevelUp()
+    {
+        player.OnLevelUp();
+        GameManager.instance.OnHitPointChange();
+    }
     //Logic
     public int peso;
     public int experience;
+
+    //On scene loaded
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode)
+    {
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
+
+    //Death menu & respawn
+    public void Respawn()
+    {
+        deathMenuAnim.SetTrigger("Hide");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainDungeon");
+        player.Respawn();
+    }
 
     public void SaveState()
     {
@@ -64,13 +141,14 @@ public class GameManager : MonoBehaviour
         s += "0" + "|";
         s += peso.ToString() + "|";
         s += experience.ToString() + "|";
-        s += "0";
+        s += weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("SaveState");
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+        SceneManager.sceneLoaded -= LoadState;
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
 
@@ -78,8 +156,15 @@ public class GameManager : MonoBehaviour
 
         //
         peso = int.Parse(data[1]);
+
+        //Experience logic
         experience = int.Parse(data[2]);
+        player.SetLevel(GetCurrentLevel());
+
         //Change weapon skin
-        Debug.Log("LoadState");
+        weapon.SetWeaponLevel(int.Parse(data[3]));
+
+        Debug.Log("LoadState Weapon Level = " + int.Parse(data[3]));
+
     }
 }
