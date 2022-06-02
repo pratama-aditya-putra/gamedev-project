@@ -28,10 +28,10 @@ public class JakaController : MonoBehaviour
 
     public float CROSSHAIR_DISTANCE = 1.0f;
 
-    public int numOfHearts;
+    /*public int numOfHearts;
     public Image[] hearts;
     public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public Sprite emptyHeart;*/
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +73,7 @@ public class JakaController : MonoBehaviour
 
         Aim();
 
-        for (int i = 0; i < hearts.Length; i++)
+        /*for (int i = 0; i < hearts.Length; i++)
         {
             if(i < health)
             {
@@ -92,20 +92,41 @@ public class JakaController : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
-        }
+        }*/
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.zero, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
             if (hit.collider != null)
             {
-                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+                /*NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }*/
+
+                Npc chara = hit.collider.GetComponent<Npc>();
+                if (chara != null)
+                {
+                    chara.trigger.StartDialogue();
+                }
+            }
+
+            RaycastHit2D hit1 = Physics2D.Raycast(rigidbody2d.position + Vector2.zero, lookDirection, 1.5f, LayerMask.GetMask("Blocker"));
+            if (hit1.collider != null)
+            {
+                Block1 block1 = hit1.collider.GetComponent<Block1>();
+                if (block1 != null)
+                {
+                    block1.Talked();
+                }
             }
         }
     }
 
     void FixedUpdate()
     {
+        if (DialogueManager.isActive == true) return;
         Vector2 position = rigidbody2d.position;
         position.x += speed * horizontal * Time.deltaTime;
         position.y += speed * vertical * Time.deltaTime;
@@ -136,7 +157,7 @@ public class JakaController : MonoBehaviour
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
     void Launch()
