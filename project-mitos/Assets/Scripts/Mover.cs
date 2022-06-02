@@ -8,8 +8,12 @@ public class Mover : Fighter
     protected BoxCollider2D boxCollider;
     protected RaycastHit2D hit;
     protected Vector3 moveDelta;
-    protected float ySpeed = 0.75f;
-    protected float xSpeed = 1;
+    public float ySpeed = 0.75f;
+    public float xSpeed = 1;
+
+    public float sizeX = 1.0f;
+    public float sizeY = 1.0f;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -23,9 +27,9 @@ public class Mover : Fighter
 
         //Rotate sprite to direction
         if (moveDelta.x > 0)
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(sizeX, sizeY, 1);
         else if (moveDelta.x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-sizeX, sizeY, 1);
 
         //Add push vector
         moveDelta += pushDirection;
