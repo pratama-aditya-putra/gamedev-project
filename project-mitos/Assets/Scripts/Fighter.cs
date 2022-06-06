@@ -28,7 +28,7 @@ public class Fighter : MonoBehaviour
 
             GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.zero, 0.2f);
 
-            if (hitPoints < 0)
+            if (hitPoints <= 0)
             {
                 hitPoints = 0;
                 Death();

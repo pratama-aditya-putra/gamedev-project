@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : Collidable
 {
     Rigidbody2D rigidbody2D;
 
@@ -13,9 +13,11 @@ public class Projectile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        if(transform.position.magnitude > 1000.0f)
+        base.Update();
+
+        if (transform.position.magnitude > 10.0f)
         {
             Destroy(gameObject);
         }
@@ -26,7 +28,25 @@ public class Projectile : MonoBehaviour
         rigidbody2D.AddForce(direction * force);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    protected override void OnCollide(Collider2D coll)
+    {
+        if (coll.name != "Player")
+                Destroy(gameObject);
+
+            //Create a new damage object and then send it to the collided object
+            /*Damage dmg = new Damage()
+            {
+                damageAmount = damagePoint[weaponLevel],
+                origin = transform.position,
+                pushForce = pushForce[weaponLevel]
+            };
+
+            coll.SendMessage("ReceiveDamage", dmg);
+        }*/
+    }
+
+
+    /*void OnCollisionEnter2D(Collision2D other)
     {
         MusuhController enemy = other.gameObject.GetComponent<MusuhController>();
 
@@ -37,5 +57,5 @@ public class Projectile : MonoBehaviour
 
         Debug.Log("Projectile Collision with " + other.gameObject);
         Destroy(gameObject);
-    }
+    }*/
 }

@@ -9,6 +9,11 @@ public class Player : Mover
     Vector2 lookDirection = new Vector2(1, 0);
     float horizontal;
     float vertical;
+
+    public GameObject projectilePrefab;
+    public GameObject crosshair;
+    public float CROSSHAIR_DISTANCE = 1.0f;
+
     private bool isAlive = true;
     protected override void Start()
     {
@@ -51,7 +56,15 @@ public class Player : Mover
         }
 
         animator.SetFloat("Move X", lookDirection.x);
-        animator.SetFloat("Speed", move.magnitude);
+        animator.SetFloat("Speed", move.magnitude); 
+        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Launch();
+        }
+
+        Aim();
+
     }
     private void FixedUpdate()
     {
@@ -81,5 +94,24 @@ public class Player : Mover
             hitPoints = maxHitpoints;
         GameManager.instance.ShowText("+" + healingAmount.ToString() + "hp", 25, Color.green, transform.position,Vector3.up * 20, 0.5f);
         GameManager.instance.OnHitPointChange();
+    }
+
+    void Launch()
+    {
+        Vector2 shootingDirection = crosshair.transform.localPosition;
+
+        GameObject projectileObject = Instantiate(projectilePrefab, transform.position + new Vector3(lookDirection.x, lookDirection.y, 0) * 0.2f, Quaternion.identity);
+        Debug.Log(transform.position - Vector3.up * 0.1f);
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
+        projectile.Launch(lookDirection, 50);
+    }
+
+    void Aim()
+    {
+        if (lookDirection != Vector2.zero)
+        {
+            crosshair.transform.localPosition = lookDirection * CROSSHAIR_DISTANCE;
+        }
     }
 }

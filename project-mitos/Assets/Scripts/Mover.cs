@@ -46,6 +46,8 @@ public class Mover : Fighter
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
 
         }
+        else
+            pushDirection = Vector3.zero;
         //Making sure we can move in this direction, by casting a box there first, if the box return null then we can move 
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
@@ -55,5 +57,7 @@ public class Mover : Fighter
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
 
         }
+        else
+            pushDirection = Vector3.zero;
     }
 }
