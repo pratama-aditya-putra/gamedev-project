@@ -9,8 +9,8 @@ public class JakaController : MonoBehaviour
 
     public int maxHealth = 5;
     public float timeInvincible = 2.0f;
-    
-    public int health { get { return currentHealth;  } }
+
+    public int health { get { return currentHealth; } }
     int currentHealth;
 
     bool isInvincible;
@@ -21,17 +21,13 @@ public class JakaController : MonoBehaviour
     float vertical;
 
     Animator animator;
-    Vector2 lookDirection = new Vector2(1,0);
+    Vector2 lookDirection = new Vector2(1, 0);
 
     public GameObject projectilePrefab;
     public GameObject crosshair;
 
     public float CROSSHAIR_DISTANCE = 1.0f;
 
-    /*public int numOfHearts;
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;*/
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +45,7 @@ public class JakaController : MonoBehaviour
 
         Vector2 move = new Vector2(horizontal, vertical);
 
-        if(!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
+        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
             lookDirection.Set(move.x, move.y);
             lookDirection.Normalize();
@@ -73,52 +69,15 @@ public class JakaController : MonoBehaviour
 
         Aim();
 
-        /*for (int i = 0; i < hearts.Length; i++)
-        {
-            if(i < health)
-            {
-                hearts[i].sprite = fullHeart;
-            }
-            else
-            {
-                hearts[i].sprite = emptyHeart;
-            }
-
-            if(i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }*/
-
         if (Input.GetKeyDown(KeyCode.K))
         {
             RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.zero, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
             if (hit.collider != null)
             {
-                /*NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
-                if (character != null)
-                {
-                    character.DisplayDialog();
-                }*/
-
                 Npc chara = hit.collider.GetComponent<Npc>();
                 if (chara != null)
                 {
                     chara.trigger.StartDialogue();
-                }
-            }
-
-            RaycastHit2D hit1 = Physics2D.Raycast(rigidbody2d.position + Vector2.zero, lookDirection, 1.5f, LayerMask.GetMask("Blocker"));
-            if (hit1.collider != null)
-            {
-                Block1 block1 = hit1.collider.GetComponent<Block1>();
-                if (block1 != null)
-                {
-                    block1.Talked();
                 }
             }
         }
@@ -133,14 +92,6 @@ public class JakaController : MonoBehaviour
 
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        /*//Reset Move Delta
-        moveDelta = new Vector3(x, y, 0);
-
-        //Rotate sprite to direction
-        if (moveDelta.x > 0)
-            transform.localScale = Vector3.one;
-        else if (moveDelta.x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);*/
 
         rigidbody2d.MovePosition(position);
     }
@@ -175,7 +126,7 @@ public class JakaController : MonoBehaviour
 
     void Aim()
     {
-        if(lookDirection != Vector2.zero)
+        if (lookDirection != Vector2.zero)
         {
             crosshair.transform.localPosition = lookDirection * CROSSHAIR_DISTANCE;
         }

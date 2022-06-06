@@ -322,9 +322,9 @@ GameObject:
   - component: {fileID: 326461488874242323}
   - component: {fileID: 326461488874242332}
   - component: {fileID: 326461488874242321}
-  - component: {fileID: 326461489688252606}
-  m_Layer: 10
-  m_Name: Witch
+  - component: {fileID: 740330933}
+  m_Layer: 11
+  m_Name: Witch(switch)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,7 +428,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03212118, y: -0.73334694}
+  m_Offset: {x: 0.023881197, y: -0.2636618}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.65}
@@ -439,9 +439,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5673771, y: 0.8185492}
+  m_Size: {x: 1.1112227, y: 2.0216022}
   m_EdgeRadius: 0
---- !u!114 &326461489688252606
+--- !u!114 &740330933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,8 +450,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 326461488874242333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db25a28c2a6ec3547aaa210b018723cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 56af234c588e4c44aaeb7dc2a4defeaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayTime: 4
-  dialogBox: {fileID: 310520799}
+  blocker: {fileID: 0}

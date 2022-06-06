@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block1 : MonoBehaviour
+public class Block : MonoBehaviour
 {
     public GameObject blocker;
 
@@ -18,7 +18,7 @@ public class Block1 : MonoBehaviour
         
     }
 
-    public void Talked()
+    public void openBlock()
     {
         blocker.SetActive(false);
     }
