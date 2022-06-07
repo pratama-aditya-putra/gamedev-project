@@ -68,6 +68,7 @@ public class Player : Mover
     }
     private void FixedUpdate()
     {
+        if (DialogueManager.isActive == true) return;
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         if(isAlive)

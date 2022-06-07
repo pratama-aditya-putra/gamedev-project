@@ -54,3 +54,6 @@ TagManager:
   - name: weapon
     uniqueID: 1453736387
     locked: 0
+  - name: environment
+    uniqueID: 979825325
+    locked: 0
