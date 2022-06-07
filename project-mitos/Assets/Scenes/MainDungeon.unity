@@ -12837,7 +12837,7 @@ MonoBehaviour:
   xSpeed: 1
   sizeX: 1
   sizeY: 1
-  projectilePrefab: {fileID: 2264920956832174579, guid: ff6c07c1ae6584a4b8be8834804e5f70, type: 3}
+  projectilePrefab: {fileID: 5326335484770025555, guid: 456e61c4f5d3aad4084bb293a1568534, type: 3}
   crosshair: {fileID: 1425176854}
   CROSSHAIR_DISTANCE: 1
 --- !u!61 &947375976
@@ -15270,9 +15270,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1660049555
-  m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingLayerID: 1453736387
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1988828135353101337, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16159,8 +16159,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1660049555
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ba8634a2c1c888d469e7d752cdb0f294, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -16181,7 +16181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425176854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.084, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0.08, z: 0}
   m_LocalScale: {x: 0.16, y: 0.16, z: 1}
   m_Children: []
   m_Father: {fileID: 947375978}
@@ -18802,8 +18802,8 @@ MonoBehaviour:
   - {fileID: -7870807981238829915, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
   weaponPrices: 14000000230000003c0000006400000096000000e6000000
   expTable: 0a0000000f0000001900000023000000320000003c00000050000000640000007800000096000000
-  player: {fileID: 0}
-  weapon: {fileID: 0}
+  player: {fileID: 947375975}
+  weapon: {fileID: 1238735392}
   deathMenuAnim: {fileID: 1630432518}
   floatingTextManager: {fileID: 327819113}
   hitPointBar: {fileID: 302467490}
