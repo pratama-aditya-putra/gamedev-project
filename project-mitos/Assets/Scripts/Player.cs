@@ -13,6 +13,7 @@ public class Player : Mover
     public GameObject projectilePrefab;
     public GameObject crosshair;
     public float CROSSHAIR_DISTANCE = 1.0f;
+    BoxCollider2D projectileCollider;
 
     private bool isAlive = true;
     protected override void Start()
@@ -102,10 +103,14 @@ public class Player : Mover
         Vector2 shootingDirection = crosshair.transform.localPosition;
 
         GameObject projectileObject = Instantiate(projectilePrefab, transform.position + new Vector3(lookDirection.x, lookDirection.y, 0) * 0.2f, Quaternion.identity);
-        Debug.Log(transform.position - Vector3.up * 0.1f);
+        projectileObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("weapon");
+        projectileCollider = projectileObject.GetComponent<BoxCollider2D>();
+        projectileCollider.size = new Vector2(0.2155424f, 0.08285652f);
+        projectileCollider.offset = new Vector2(0.005057238f, 0.00119327f);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
-        projectile.Launch(lookDirection, 50);
+        projectile.Launch(lookDirection, 40);
+        Debug.Log(projectileObject.layer.ToString());
     }
 
     void Aim()

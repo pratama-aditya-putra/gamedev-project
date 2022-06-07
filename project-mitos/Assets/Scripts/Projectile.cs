@@ -33,16 +33,18 @@ public class Projectile : Collidable
         if (coll.name != "Player")
                 Destroy(gameObject);
 
-            //Create a new damage object and then send it to the collided object
-            /*Damage dmg = new Damage()
-            {
-                damageAmount = damagePoint[weaponLevel],
-                origin = transform.position,
-                pushForce = pushForce[weaponLevel]
-            };
+        Debug.Log("Projectile Collision with " + coll.gameObject);
 
-            coll.SendMessage("ReceiveDamage", dmg);
-        }*/
+        //Create a new damage object and then send it to the collided object
+        /*Damage dmg = new Damage()
+        {
+            damageAmount = damagePoint[weaponLevel],
+            origin = transform.position,
+            pushForce = pushForce[weaponLevel]
+        };
+
+        coll.SendMessage("ReceiveDamage", dmg);
+    }*/
     }
 
 
