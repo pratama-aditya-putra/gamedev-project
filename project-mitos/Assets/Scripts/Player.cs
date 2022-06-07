@@ -12,8 +12,11 @@ public class Player : Mover
 
     public GameObject projectilePrefab;
     public GameObject crosshair;
-    public float CROSSHAIR_DISTANCE = 1.0f;
+    public float CROSSHAIR_DISTANCE = 0.5f;
     BoxCollider2D projectileCollider;
+    private float lastLaunch;
+    private float launchCooldown = 0.8f;
+    private Transform parent;
 
     private bool isAlive = true;
     protected override void Start()
@@ -57,15 +60,20 @@ public class Player : Mover
         }
 
         animator.SetFloat("Move X", lookDirection.x);
-        animator.SetFloat("Speed", move.magnitude); 
-        
+        animator.SetFloat("Speed", move.magnitude);
+
         if (Input.GetKeyDown(KeyCode.H))
         {
-            Launch();
+            if (Time.time - lastLaunch > launchCooldown)
+            {
+                lastLaunch = Time.time;
+                Launch();
+            }
         }
 
         Aim();
 
+        Debug.Log(lookDirection);
     }
     private void FixedUpdate()
     {
@@ -107,9 +115,11 @@ public class Player : Mover
         projectileCollider = projectileObject.GetComponent<BoxCollider2D>();
         projectileCollider.size = new Vector2(0.2155424f, 0.08285652f);
         projectileCollider.offset = new Vector2(0.005057238f, 0.00119327f);
+        //parent = gameObject.transform;
+        //projectileCollider.transform.SetParent(parent);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
-        projectile.Launch(lookDirection, 40);
+        projectile.Launch(lookDirection, 60);
         Debug.Log(projectileObject.layer.ToString());
     }
 

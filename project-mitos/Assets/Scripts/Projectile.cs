@@ -6,6 +6,9 @@ public class Projectile : Collidable
 {
     Rigidbody2D rigidbody2D;
 
+    public int damagePoint = 3;
+    public float pushForce = 2.4f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -30,21 +33,20 @@ public class Projectile : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if (coll.name != "Player")
+        if (coll.name != "Player" || coll.name != "weapon")
                 Destroy(gameObject);
 
         Debug.Log("Projectile Collision with " + coll.gameObject);
 
         //Create a new damage object and then send it to the collided object
-        /*Damage dmg = new Damage()
+        Damage dmg = new Damage()
         {
-            damageAmount = damagePoint[weaponLevel],
+            damageAmount = damagePoint,
             origin = transform.position,
-            pushForce = pushForce[weaponLevel]
+            pushForce = pushForce
         };
 
         coll.SendMessage("ReceiveDamage", dmg);
-    }*/
     }
 
 
