@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Npc : Collidable
+public class Penyihir : Collidable
 {
     public DialogueTrigger trigger;
     public bool buttonTrigger;
