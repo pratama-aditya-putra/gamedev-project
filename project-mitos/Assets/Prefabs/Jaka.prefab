@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &437657224
 Transform:
   m_ObjectHideFlags: 0
@@ -98,11 +98,11 @@ GameObject:
   - component: {fileID: 1110371965}
   m_Layer: 8
   m_Name: Jaka
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4253481355286350593
 Transform:
   m_ObjectHideFlags: 0
@@ -221,18 +221,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03354758, y: -1.0316106}
+  m_Offset: {x: 0.0039010346, y: -0.100582786}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
-    oldSize: {x: 0.7715517, y: 1.0560344}
+    oldSize: {x: 0.14916667, y: 0.20416667}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5937613, y: 0.20858175}
+  m_Size: {x: 0.14408642, y: 0.19886519}
   m_EdgeRadius: 0
 --- !u!95 &1110371965
 Animator:

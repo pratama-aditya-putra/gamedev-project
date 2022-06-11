@@ -31,7 +31,7 @@ public class Musuh : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        target = GameObject.FindWithTag("Player").transform;
+        target = GameObject.FindWithTag("Fighter").transform;
     }
 
     private void Update()
@@ -69,15 +69,15 @@ public class Musuh : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    /*void OnCollisionEnter2D(Collision2D other)
     {
-        JakaController player = other.gameObject.GetComponent<JakaController>();
+        Player player = other.gameObject.GetComponent<Player>();
 
         if (player != null)
         {
             player.ChangeHealth(-1);
         }
-    }
+    }*/
 
     public void ChangeHealth(int amount)
     {

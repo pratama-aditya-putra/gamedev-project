@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007372856, y: -0.044237375}
+  m_Offset: {x: 0.00062256306, y: -0.02148877}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5133872, y: 0.55762434}
+  m_Size: {x: 0.16507052, y: 0.17966399}
   m_EdgeRadius: 0
 --- !u!114 &5843423392929511170
 MonoBehaviour:
@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5843423392950830805
 Transform:
   m_ObjectHideFlags: 0
@@ -172,18 +172,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0057533383, y: 0.0044863224}
+  m_Offset: {x: 0.00040899217, y: -0.020442799}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53125, y: 0.9375}
+    oldSize: {x: 0.10625, y: 0.1875}
     newSize: {x: 0.265625, y: 0.46875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0030221, y: 0.9936843}
+  m_Size: {x: 0.14750943, y: 0.14081159}
   m_EdgeRadius: 0
 --- !u!95 &5843423392950830807
 Animator:
@@ -222,7 +222,7 @@ MonoBehaviour:
   shouldRotate: 1
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 128
   dir: {x: 0, y: 0, z: 0}
   maxHealth: 2
 --- !u!50 &5843423392950830801

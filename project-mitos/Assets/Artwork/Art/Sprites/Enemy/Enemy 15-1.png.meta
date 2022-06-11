@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: fab7fc740976b2648b709e30b5123b66
+guid: 28933cc5e21f2e14aa416d1dd43bba7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6057295854088651647
-    second: Dog-01-2r_0
+      213: 7019144836877330861
+    second: Enemy 15-1_0
   - first:
-      213: 7233737260565844339
-    second: Dog-01-2r_1
+      213: 7420946542478651529
+    second: Enemy 15-1_1
   - first:
-      213: -8210123850255337250
-    second: Dog-01-2r_2
+      213: -2191438722528646386
+    second: Enemy 15-1_2
   - first:
-      213: 7507393469702950630
-    second: Dog-01-2r_3
+      213: -2283890004374828644
+    second: Enemy 15-1_3
   - first:
-      213: -2595566585054706663
-    second: Dog-01-2r_4
+      213: -6574815315658611941
+    second: Enemy 15-1_4
   - first:
-      213: -197879907321390998
-    second: Dog-01-2r_5
+      213: 335896145671079918
+    second: Enemy 15-1_5
   - first:
-      213: -1606353786421045282
-    second: Dog-01-2r_6
+      213: 416793953021077890
+    second: Enemy 15-1_6
   - first:
-      213: 8940651625142450262
-    second: Dog-01-2r_7
+      213: 3334566911542515657
+    second: Enemy 15-1_7
   - first:
-      213: 6548275144399866738
-    second: Dog-01-2r_8
+      213: 3188126372652883356
+    second: Enemy 15-1_8
   - first:
-      213: -6330244323401981793
-    second: Dog-01-2r_9
+      213: -4301809688275245021
+    second: Enemy 15-1_9
   - first:
-      213: 1231351739247158675
-    second: Dog-01-2r_10
+      213: 9110502987807238244
+    second: Enemy 15-1_10
   - first:
-      213: -7694299243403464437
-    second: Dog-01-2r_11
+      213: -1690784948930322148
+    second: Enemy 15-1_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -82,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 160
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,49 +123,16 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dog-01-2r_0
+      name: Enemy 15-1_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 97
-        width: 17
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7386628c76df0450800000000000000
-      internalID: 6057295854088651647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dog-01-2r_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 97
-        width: 17
+        x: 1
+        y: 96
+        width: 31
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 371d88666b5636460800000000000000
-      internalID: 7233737260565844339
+      spriteID: da927154a03096160800000000000000
+      internalID: 7019144836877330861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog-01-2r_2
+      name: Enemy 15-1_1
       rect:
         serializedVersion: 2
-        x: 72
+        x: 34
         y: 97
-        width: 17
-        height: 29
+        width: 29
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +162,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed871977bd7cf0e80800000000000000
-      internalID: -8210123850255337250
+      spriteID: 9807a91009f7cf660800000000000000
+      internalID: 7420946542478651529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog-01-2r_3
+      name: Enemy 15-1_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 98
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0be4a4b7127691e0800000000000000
+      internalID: -2191438722528646386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 15-1_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 64
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c994c2f342efd40e0800000000000000
+      internalID: -2283890004374828644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 15-1_4
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 65
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13ee562e4091c4a0800000000000000
+      internalID: -6574815315658611941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 15-1_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 66
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7c52cc3c759a400800000000000000
+      internalID: 335896145671079918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 15-1_6
       rect:
         serializedVersion: 2
         x: 1
-        y: 65
-        width: 30
-        height: 22
+        y: 32
+        width: 26
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ee4bb6b59e9f2860800000000000000
-      internalID: 7507393469702950630
+      spriteID: 2892a5a54efb8c500800000000000000
+      internalID: 416793953021077890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog-01-2r_4
+      name: Enemy 15-1_7
       rect:
         serializedVersion: 2
-        x: 33
-        y: 65
-        width: 30
-        height: 23
+        x: 34
+        y: 33
+        width: 25
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +288,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 914c0fa51f1bafbd0800000000000000
-      internalID: -2595566585054706663
+      spriteID: 9c7534250f2c64e20800000000000000
+      internalID: 3334566911542515657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog-01-2r_5
+      name: Enemy 15-1_8
       rect:
         serializedVersion: 2
-        x: 65
-        y: 65
-        width: 30
-        height: 22
+        x: 67
+        y: 34
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +309,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a68dbefc54df04df0800000000000000
-      internalID: -197879907321390998
+      spriteID: c9d97056b008e3c20800000000000000
+      internalID: 3188126372652883356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog-01-2r_6
+      name: Enemy 15-1_9
       rect:
         serializedVersion: 2
         x: 1
-        y: 33
-        width: 30
-        height: 22
+        y: 0
+        width: 31
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,62 +330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed715c8fdb515b9e0800000000000000
-      internalID: -1606353786421045282
+      spriteID: 328250761e6ec44c0800000000000000
+      internalID: -4301809688275245021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog-01-2r_7
+      name: Enemy 15-1_10
       rect:
         serializedVersion: 2
-        x: 33
-        y: 33
-        width: 30
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65872219843931c70800000000000000
-      internalID: 8940651625142450262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dog-01-2r_8
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 33
-        width: 30
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27b4971bc8520ea50800000000000000
-      internalID: 6548275144399866738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dog-01-2r_9
-      rect:
-        serializedVersion: 2
-        x: 8
+        x: 34
         y: 1
-        width: 17
-        height: 27
+        width: 29
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +351,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f902132b3547628a0800000000000000
-      internalID: -6330244323401981793
+      spriteID: 468a269a2320f6e70800000000000000
+      internalID: 9110502987807238244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog-01-2r_10
+      name: Enemy 15-1_11
       rect:
         serializedVersion: 2
-        x: 40
-        y: 1
-        width: 17
-        height: 28
+        x: 67
+        y: 2
+        width: 27
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,29 +372,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 395e26302e3a61110800000000000000
-      internalID: 1231351739247158675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dog-01-2r_11
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 1
-        width: 17
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b013161ba9b583590800000000000000
-      internalID: -7694299243403464437
+      spriteID: c116e6f0c002988e0800000000000000
+      internalID: -1690784948930322148
       vertices: []
       indices: 
       edges: []
