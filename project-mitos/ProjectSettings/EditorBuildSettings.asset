@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Jungle.unity
+    guid: d3ace841b86190f4fabe1976b97aac77
+  - enabled: 1
+    path: Assets/Scenes/Jungle 1.unity
+    guid: 25e3d78e39367a740848e343c1da76a1
+  - enabled: 1
     path: Assets/Scenes/MainDungeon.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Dungeon1.unity
     guid: 01632f97de3287d40b62109cd309778e
+  - enabled: 1
+    path: Assets/Scenes/Underwater.unity
+    guid: abf6e3cfff84f4347a34d28fe9578f64
+  - enabled: 1
+    path: Assets/Scenes/Underwater 1.unity
+    guid: 364adf3bd8a1b734fa7cedcce43d77a4
   m_configObjects: {}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     public GameObject blocker;
-    public Npc npc;
+    public Penyihir penyihir;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +16,7 @@ public class Block : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (npc.tag == "Penyihir")
-        {
-            if (DialogueManager.isEnd == true)
-                openBlock();
-        }
+        
     }
 
     public void openBlock()
