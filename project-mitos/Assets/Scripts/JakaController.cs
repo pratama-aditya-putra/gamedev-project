@@ -119,7 +119,7 @@ public class JakaController : MonoBehaviour
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
-        projectile.Launch(lookDirection, 300);
+        //projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
     }

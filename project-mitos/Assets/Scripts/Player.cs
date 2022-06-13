@@ -62,7 +62,7 @@ public class Player : Mover
         animator.SetFloat("Move X", lookDirection.x);
         animator.SetFloat("Speed", move.magnitude);
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             if (Time.time - lastLaunch > launchCooldown)
             {
@@ -72,8 +72,6 @@ public class Player : Mover
         }
 
         Aim();
-
-        Debug.Log(lookDirection);
     }
     private void FixedUpdate()
     {
@@ -108,19 +106,30 @@ public class Player : Mover
 
     void Launch()
     {
-        Vector2 shootingDirection = crosshair.transform.localPosition;
+        Camera cam = Camera.main;
+        Vector2 aim, direction;
 
-        GameObject projectileObject = Instantiate(projectilePrefab, transform.position + new Vector3(lookDirection.x, lookDirection.y, 0) * 0.2f, Quaternion.identity);
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane;
+        Vector3 Worldpos = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector2 Worldpos2D = new Vector2(Worldpos.x, Worldpos.y);
+
+        direction = Worldpos2D * 100;
+        direction.Normalize();
+
+        direction = Worldpos - transform.position;
+        direction.Normalize();
+
+
+        GameObject projectileObject = Instantiate(projectilePrefab, transform.position + new Vector3(direction.x, direction.y, transform.position.z) * 0.2f, Quaternion.identity);
         projectileObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("weapon");
         projectileCollider = projectileObject.GetComponent<BoxCollider2D>();
         projectileCollider.size = new Vector2(0.2155424f, 0.08285652f);
         projectileCollider.offset = new Vector2(0.005057238f, 0.00119327f);
-        //parent = gameObject.transform;
-        //projectileCollider.transform.SetParent(parent);
+
         Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
-        projectile.Launch(lookDirection, 60);
-        Debug.Log(projectileObject.layer.ToString());
+        projectile.transform.Rotate(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+        projectile.Launch(direction * 4, 10);
     }
 
     void Aim()
