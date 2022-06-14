@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public Animator deathMenuAnim;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitPointBar;
+    public RectTransform manaPointBar;
     public GameObject hud;
     public GameObject menu;
 
@@ -68,6 +69,12 @@ public class GameManager : MonoBehaviour
         hitPointBar.localScale = new Vector3(ratio,1,1);
     }
 
+    //Hitpoint bar
+    public void OnManaPointChange()
+    {
+        float ratio = (float)player.Mana / (float)player.maxMana;
+        manaPointBar.localScale = new Vector3(ratio, 1, 1);
+    }
 
     public int GetCurrentLevel()
     {

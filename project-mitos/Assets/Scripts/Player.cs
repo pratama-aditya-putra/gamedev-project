@@ -17,6 +17,15 @@ public class Player : Mover
     private float lastLaunch;
     private float launchCooldown = 0.8f;
     private Transform parent;
+    
+    //Mana mechanic
+    public float maxMana = 10;
+    public float Mana = 10;
+    public float manaRecovery = 0.5f;
+    public float manaRecoverySpeed = 1.0f;
+    public float lastManaRecovery;
+    public float fireballManaCost = 2.0f;
+
 
     private bool isAlive = true;
     protected override void Start()
@@ -62,10 +71,25 @@ public class Player : Mover
         animator.SetFloat("Move X", lookDirection.x);
         animator.SetFloat("Speed", move.magnitude);
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+
+        if (Mana < maxMana)
+        {
+            if (Time.time - lastManaRecovery > manaRecoverySpeed)
+            {
+                lastManaRecovery = Time.time;
+                Mana += manaRecovery;
+                if (Mana > maxMana)
+                    Mana = maxMana;
+                Debug.Log(Mana);
+                GameManager.instance.OnManaPointChange();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) && Mana > fireballManaCost)
         {
             if (Time.time - lastLaunch > launchCooldown)
             {
+                OnMagicSpell(fireballManaCost);
                 lastLaunch = Time.time;
                 Launch();
             }
@@ -73,6 +97,15 @@ public class Player : Mover
 
         Aim();
     }
+
+    protected void OnMagicSpell(float cost)
+    {
+        if (Mana <= 0)
+            return;
+        Mana -= cost;
+        GameManager.instance.OnManaPointChange();
+    }
+
     private void FixedUpdate()
     {
         if (DialogueManager.isActive == true) return;

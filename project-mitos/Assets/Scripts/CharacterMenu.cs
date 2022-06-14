@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterMenu : MonoBehaviour
 {
     //Text fields
-    public Text levelText, hitpointText, pesosText, upgradeCost, xpText;
+    public Text levelText, hitpointText, pesosText, upgradeCost, xpText, manapointText;
 
     //Logic field
     private int currentCharacterSelection = 0;
@@ -65,7 +65,8 @@ public class CharacterMenu : MonoBehaviour
 
         //Meta
         levelText.text = GameManager.instance.GetCurrentLevel().ToString();
-        hitpointText.text = GameManager.instance.player.hitPoints.ToString();
+        hitpointText.text = GameManager.instance.player.hitPoints.ToString() + " / " + GameManager.instance.player.maxHitpoints.ToString();
+        manapointText.text = GameManager.instance.player.Mana.ToString() + " / " + GameManager.instance.player.maxMana.ToString();
         pesosText.text = GameManager.instance.peso.ToString();
 
         //Xp bar
