@@ -106,8 +106,7 @@ public class Player : Mover
 
     void Launch()
     {
-        Camera cam = Camera.main;
-        Vector2 aim, direction;
+        Vector2 direction;
 
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
