@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
     {
         player.OnLevelUp();
         GameManager.instance.OnHitPointChange();
+        GameManager.instance.OnManaPointChange();
     }
     //Logic
     public int peso;

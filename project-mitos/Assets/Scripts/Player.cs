@@ -11,20 +11,18 @@ public class Player : Mover
     float vertical;
 
     public GameObject projectilePrefab;
-    public GameObject crosshair;
-    public float CROSSHAIR_DISTANCE = 0.5f;
     BoxCollider2D projectileCollider;
     private float lastLaunch;
     private float launchCooldown = 0.8f;
     private Transform parent;
     
     //Mana mechanic
-    public float maxMana = 10;
-    public float Mana = 10;
+    public float maxMana = 12;
+    public float Mana = 12;
     public float manaRecovery = 0.5f;
-    public float manaRecoverySpeed = 1.0f;
+    public float manaRecoverySpeed = 1.5f;
     public float lastManaRecovery;
-    public float fireballManaCost = 2.0f;
+    public float fireballManaCost = 3.0f;
 
 
     private bool isAlive = true;
@@ -80,7 +78,6 @@ public class Player : Mover
                 Mana += manaRecovery;
                 if (Mana > maxMana)
                     Mana = maxMana;
-                Debug.Log(Mana);
                 GameManager.instance.OnManaPointChange();
             }
         }
@@ -94,8 +91,6 @@ public class Player : Mover
                 Launch();
             }
         }
-
-        Aim();
     }
 
     protected void OnMagicSpell(float cost)
@@ -119,6 +114,10 @@ public class Player : Mover
     {
         maxHitpoints += 2;
         hitPoints = maxHitpoints;
+        maxMana += 3;
+        Mana = maxMana;
+        manaRecovery += 0.1f;
+        manaRecoverySpeed -= 0.02f;
     }
     public void SetLevel(int level)
     {
@@ -164,11 +163,4 @@ public class Player : Mover
         projectile.Launch(direction * 4, 10);
     }
 
-    void Aim()
-    {
-        if (lookDirection != Vector2.zero)
-        {
-            crosshair.transform.localPosition = lookDirection * CROSSHAIR_DISTANCE;
-        }
-    }
 }

@@ -14365,14 +14365,12 @@ MonoBehaviour:
   sizeX: 1
   sizeY: 1
   projectilePrefab: {fileID: 5326335484770025555, guid: 456e61c4f5d3aad4084bb293a1568534, type: 3}
-  crosshair: {fileID: 1425176854}
-  CROSSHAIR_DISTANCE: 1
-  maxMana: 10
-  Mana: 10
+  maxMana: 12
+  Mana: 12
   manaRecovery: 0.5
-  manaRecoverySpeed: 1
+  manaRecoverySpeed: 1.5
   lastManaRecovery: 0
-  fireballManaCost: 2
+  fireballManaCost: 3
 --- !u!61 &947375976
 BoxCollider2D:
   m_ObjectHideFlags: 0
