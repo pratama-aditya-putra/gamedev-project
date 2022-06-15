@@ -14,7 +14,7 @@ public class Enemy : Mover
     public bool chasing;
     private bool collidingWithPlayer;
     private Transform  playerTransform;
-    private Vector3 startingPosition;
+    protected Vector3 startingPosition;
 
     //Hitbox
     private ContactFilter2D filter;

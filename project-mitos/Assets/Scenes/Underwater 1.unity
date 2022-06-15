@@ -24571,9 +24571,12 @@ MonoBehaviour:
   pesosText: {fileID: 606415258}
   upgradeCost: {fileID: 1641384263}
   xpText: {fileID: 1571487039}
+  manapointText: {fileID: 0}
   characterSelectionSPrite: {fileID: 615093272}
   weaponSprite: {fileID: 1065408303}
   xpBar: {fileID: 1650209759}
+  inventoryItem: []
+  inventoryItemAmount: []
 --- !u!224 &424576577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30674,11 +30677,14 @@ MonoBehaviour:
   - {fileID: -7870807981238829915, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
   weaponPrices: 14000000230000003c0000006400000096000000e6000000
   expTable: 0a0000000f0000001900000023000000320000003c00000050000000640000007800000096000000
+  itemsPrefabs: []
+  items: []
   player: {fileID: 1247719587}
   weapon: {fileID: 158426116}
   deathMenuAnim: {fileID: 684719288}
   floatingTextManager: {fileID: 1499366718}
   hitPointBar: {fileID: 845747189}
+  manaPointBar: {fileID: 0}
   hud: {fileID: 1227982698}
   menu: {fileID: 424576575}
   peso: 15
@@ -34619,8 +34625,12 @@ MonoBehaviour:
   sizeX: 1
   sizeY: 1
   projectilePrefab: {fileID: 5326335484770025555, guid: 456e61c4f5d3aad4084bb293a1568534, type: 3}
-  crosshair: {fileID: 1268009453}
-  CROSSHAIR_DISTANCE: 1
+  maxMana: 12
+  Mana: 12
+  manaRecovery: 0.5
+  manaRecoverySpeed: 1.5
+  lastManaRecovery: 0
+  fireballManaCost: 3
 --- !u!114 &1247719588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48515,7 +48525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d0b28ad8ad71f42b831c3cebff62ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Underwater 1
+  sceneName: Jungle
 --- !u!61 &2046620821
 BoxCollider2D:
   m_ObjectHideFlags: 0

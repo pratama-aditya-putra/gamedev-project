@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private bool paused;
+
     //Resources
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
@@ -100,32 +102,33 @@ public class GameManager : MonoBehaviour
     //Add and remove item
     public void AddItem(Item newItem)
     {
-        foreach(Item item in items)
+        for(int i=0;i < items.Count;i++)
         {
-            if (item == newItem)
+            if (items[i].itemId == newItem.itemId)
             {
-                item.amount++;
+                items[i].amount++;
                 return;
             }
         }
         items.Add(newItem);
     }
 
-    public void RemoveItem(Item redItem, int unit)
+    public void RemoveItem(Item redItem)
     {
-        int i = 0;
-        foreach (Item item in items)
+        for(int i = 0; i < items.Count;i++)
         {
-            if (item == redItem && item.amount >= 1)
+            if (items[i].itemId == redItem.itemId)
             {
-                item.amount--;
-                return;
+                if (items[i].amount > 1)
+                {
+                    items[i].amount--;
+                    return;
+                }
+                else
+                {
+                    items.RemoveAt(i);
+                }
             }
-            else
-            {
-                items.RemoveAt(i);
-            }
-            i++;
         }
     }
 

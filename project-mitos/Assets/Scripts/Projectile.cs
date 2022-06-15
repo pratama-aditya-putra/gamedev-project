@@ -8,6 +8,7 @@ public class Projectile : Collidable
 
     public int damagePoint = 3;
     public float pushForce = 2.4f;
+    private float distance = 4.0f;
 
     // Start is called before the first frame update
     void Awake()
@@ -20,7 +21,8 @@ public class Projectile : Collidable
     {
         base.Update();
 
-        if (transform.position.magnitude > 4.0f)
+        distance = Vector3.Distance(GameManager.instance.player.transform.position, transform.position);
+        if (distance > 10.0f)
         {
             Destroy(gameObject);
         }

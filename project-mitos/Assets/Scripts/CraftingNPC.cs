@@ -7,10 +7,12 @@ public class CraftingNPC : Collidable
     private bool buttonTriggerShow;
     private bool buttonTriggerHide;
     public Animator craftingAnim;
+    public CraftingManager managerCrafting;
     protected override void OnCollide(Collider2D coll)
     {
         if (coll.tag == "Fighter" && coll.name == "Player" && buttonTriggerShow)
         {
+            managerCrafting.UpdateInventory();
             craftingAnim.SetTrigger("Show");
         }
         if (coll.tag == "Fighter" && coll.name == "Player" && buttonTriggerHide)

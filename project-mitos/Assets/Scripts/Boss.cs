@@ -16,6 +16,12 @@ public class Boss : Enemy
     public RectTransform bossHpBar;
     private bool isAlive = true;
 
+    protected override void Start()
+    {
+        base.Start();
+        bossHpBar.localScale = Vector3.one;
+    }
+
     private void Update()
     {
         for(int i = 0; i < fireball.Length; i++)
@@ -51,6 +57,8 @@ public class Boss : Enemy
     protected override void Death()
     {
         base.Death();
+        bossHpBar.localScale = Vector3.one;
+        bossHUD.gameObject.SetActive(false);
         isAlive = false;
         door.layer = LayerMask.GetMask("Default");
         door.GetComponent<BoxCollider2D>().enabled = false;

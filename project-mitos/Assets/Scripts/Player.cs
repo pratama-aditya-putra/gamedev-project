@@ -44,10 +44,12 @@ public class Player : Mover
     {
         isAlive = false;
         GameManager.instance.deathMenuAnim.SetTrigger("Show");
+        GameManager.instance.SaveState();
     }
     public void Respawn()
     {
         Heal(maxHitpoints);
+        Mana = maxMana;
         isAlive = true;
         lastImmune = Time.time;
         pushDirection = Vector3.zero;

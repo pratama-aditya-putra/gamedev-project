@@ -14,6 +14,31 @@ public class CraftingManager : MonoBehaviour
     public string[] recipes;
     public Item[] recipesResults;
     public Slot resultSlot;
+    public List<Item> inventoryItem;
+    public List<Text> inventoryItemAmount;
+
+    private void Start()
+    {
+        UpdateInventory();
+    }
+
+    public void UpdateInventory()
+    {
+        //Item mechanic for 
+        for (int i = 0; i < 18; i++)
+        {
+            inventoryItem[i].gameObject.SetActive(false);
+        }
+        for (int i = 0; i < GameManager.instance.items.Count; i++)
+        {
+            inventoryItem[i].GetComponent<Image>().sprite = GameManager.instance.items[i].GetComponent<Image>().sprite;
+            inventoryItem[i].itemName = GameManager.instance.items[i].itemName;
+            inventoryItem[i].itemId = GameManager.instance.items[i].itemId;
+            inventoryItem[i].amount = GameManager.instance.items[i].amount;
+            inventoryItemAmount[i].text = inventoryItem[i].amount.ToString();
+            inventoryItem[i].gameObject.SetActive(true);
+        }
+    }
 
     private void Update()
     {
@@ -35,13 +60,20 @@ public class CraftingManager : MonoBehaviour
                         nearestSlot = slot;
                     }
                 }
+                GameObject tempObject = Instantiate(currentItem.gameObject);
+                /*tempObject.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
+                tempItem.itemName = currentItem.itemName;
+                tempItem.itemId = currentItem.itemId;
+                tempItem.amount = currentItem.amount;*/
                 nearestSlot.gameObject.SetActive(true);
                 nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-                nearestSlot.item = currentItem;
-                itemLists[nearestSlot.index] = currentItem;
+                nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
+                itemLists[nearestSlot.index] = tempObject.gameObject.GetComponent<Item>();
+                CheckForCreatedRecipes();
                 currentItem = null;
 
-                CheckForCreatedRecipes();
+                GameManager.instance.RemoveItem(nearestSlot.item);
+                UpdateInventory();
             }
         }
     }
@@ -50,6 +82,11 @@ public class CraftingManager : MonoBehaviour
     {
         resultSlot.gameObject.SetActive(false);
         resultSlot.item = null;
+
+        for(int i = 0; i < 4; i++)
+        {
+            itemLists[i] = craftingSlots[i].item;
+        }
 
         string currentRecipeString = "";
         foreach(Item item in itemLists)
@@ -73,11 +110,32 @@ public class CraftingManager : MonoBehaviour
         Debug.Log(currentRecipeString);
     }
 
+    public void OnClickResult(Slot slot)
+    {
+        GameManager.instance.AddItem(slot.item);
+        slot.item = null;
+        for(int i = 0; i < 4; i++)
+        {
+            Item temp = new Item();
+            temp.itemId = 0;
+            temp.itemName = "";
+            temp.amount = 0;
+            itemLists[i] = null;
+            craftingSlots[i].item = temp;
+            craftingSlots[i].gameObject.SetActive(false);
+        }
+        slot.gameObject.SetActive(false);
+        GameManager.instance.SaveState();
+        UpdateInventory();
+    }
+
     public void OnClickSlot(Slot slot)
     {
+        GameManager.instance.AddItem(slot.item);
         slot.item = null;
         itemLists[slot.index] = null;
         slot.gameObject.SetActive(false);
+        UpdateInventory();
         CheckForCreatedRecipes();
     }
 
