@@ -20,7 +20,7 @@ public class Projectile : Collidable
     {
         base.Update();
 
-        if (transform.position.magnitude > 10.0f)
+        if (transform.position.magnitude > 4.0f)
         {
             Destroy(gameObject);
         }
@@ -33,11 +33,11 @@ public class Projectile : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if (coll.name != "Player" || coll.name != "weapon")
+        Debug.Log("Projectile Collision with " + coll.gameObject);
+        if (coll.name != "Player" && coll.name != "weapon" && coll.name != "upper")
                 Destroy(gameObject);
 
 
-        Debug.Log("Projectile Collision with " + coll.gameObject);
 
         if (coll.tag == "Fighter")
         {

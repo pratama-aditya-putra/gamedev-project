@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public List<Sprite> weaponSprites;
     public List<int> weaponPrices;
     public List<int> expTable;
+    public List<Item> itemsPrefabs;
+    public List<Item> items;
 
     //References
     public Player player;
@@ -69,7 +71,7 @@ public class GameManager : MonoBehaviour
         hitPointBar.localScale = new Vector3(ratio,1,1);
     }
 
-    //Hitpoint bar
+    //Manapoint bar
     public void OnManaPointChange()
     {
         float ratio = (float)player.Mana / (float)player.maxMana;
@@ -93,6 +95,38 @@ public class GameManager : MonoBehaviour
         }
 
         return r;
+    }
+
+    //Add and remove item
+    public void AddItem(Item newItem)
+    {
+        foreach(Item item in items)
+        {
+            if (item == newItem)
+            {
+                item.amount++;
+                return;
+            }
+        }
+        items.Add(newItem);
+    }
+
+    public void RemoveItem(Item redItem, int unit)
+    {
+        int i = 0;
+        foreach (Item item in items)
+        {
+            if (item == redItem && item.amount >= 1)
+            {
+                item.amount--;
+                return;
+            }
+            else
+            {
+                items.RemoveAt(i);
+            }
+            i++;
+        }
     }
 
     public int GetXptoLevel(int level)
@@ -124,6 +158,7 @@ public class GameManager : MonoBehaviour
         GameManager.instance.OnHitPointChange();
         GameManager.instance.OnManaPointChange();
     }
+
     //Logic
     public int peso;
     public int experience;
@@ -149,13 +184,19 @@ public class GameManager : MonoBehaviour
         s += "0" + "|";
         s += peso.ToString() + "|";
         s += experience.ToString() + "|";
-        s += weapon.weaponLevel.ToString();
+        s += weapon.weaponLevel.ToString() + "|";
+        foreach(Item item in items)
+        {
+            s += item.itemId.ToString();
+        }
+        s += "|";
 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("SaveState");
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+        string temp = "";
         SceneManager.sceneLoaded -= LoadState;
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
@@ -171,6 +212,19 @@ public class GameManager : MonoBehaviour
 
         //Change weapon skin
         weapon.SetWeaponLevel(int.Parse(data[3]));
+
+        //Inventory
+        for(int i = 0; i < data[4].Length; i += 4)
+        {
+            temp += data[4][i] + data[4][i+1] + data[4][i + 2] + data[4][i + 3];
+            foreach(Item item in itemsPrefabs)
+            {
+                if(item.itemId == int.Parse(temp))
+                {
+                    AddItem(item);
+                }
+            }
+        }
 
         Debug.Log("LoadState Weapon Level = " + int.Parse(data[3]));
 

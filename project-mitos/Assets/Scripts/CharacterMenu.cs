@@ -13,6 +13,8 @@ public class CharacterMenu : MonoBehaviour
     public Image characterSelectionSPrite;
     public Image weaponSprite;
     public RectTransform xpBar;
+    public List<Item> inventoryItem;
+    public List<Text> inventoryItemAmount;
 
     //Character Selection
     public void OnArrowClick(bool right)
@@ -88,5 +90,15 @@ public class CharacterMenu : MonoBehaviour
             xpBar.localScale = new Vector3(completionRatio, 1, 1);
             xpText.text = currXpIntoLevel + " / " + diff;
         } 
+
+        //Item mechanic
+        for(int i=0;i < GameManager.instance.items.Count; i++)
+        {
+            inventoryItem[i].GetComponent<Image>().sprite = GameManager.instance.items[i].GetComponent<Image>().sprite;
+            inventoryItem[i].itemName = GameManager.instance.items[i].itemName;
+            inventoryItem[i].amount = GameManager.instance.items[i].amount;
+            inventoryItemAmount[i].text = inventoryItem[i].amount.ToString();
+            inventoryItem[i].gameObject.SetActive(true);
+        }
     }
 }

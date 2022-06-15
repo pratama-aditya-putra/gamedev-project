@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public int itemId;
+    public int amount;
     public string itemName;
 }
