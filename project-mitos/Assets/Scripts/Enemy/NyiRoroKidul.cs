@@ -1,86 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NyiRoroKidul : Mover
+public class NyiRoroKidul : Enemy
 {
-    //Experience
-    public int xpValue = 1;
-
-    //Logic
-    public float triggerRange = 0.3f;
-    public float chaseLength = 1.0f;
-
-    private bool chasing;
-    private bool collidingWithPlayer;
-    private Transform playerTransform;
-    private Vector3 startingPosition;
-
-    //Hitbox
-    private ContactFilter2D filter;
-    private BoxCollider2D hitBox;
-    private Collider2D[] hits = new Collider2D[10];
+    public Canvas bossHUD;
+    public string setBossName;
+    public Text bossName;
+    public RectTransform bossHpBar;
+    private bool isAlive = true;
 
     public GameObject portal;
-    public GameObject chest;
 
     protected override void Start()
     {
         base.Start();
-        playerTransform = GameManager.instance.player.transform;
-        startingPosition = transform.position;
-        hitBox = transform.GetChild(0).GetComponent<BoxCollider2D>();
+        bossHpBar.localScale = Vector3.one;
     }
-
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
-        //Checking if position of player is inside the range
-        if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
+        base.FixedUpdate();
+        if (chasing == true)
         {
-            if (Vector3.Distance(playerTransform.position, startingPosition) < triggerRange)
-                chasing = true;
-
-            if (chasing == true)
-            {
-                if (!collidingWithPlayer)
-                {
-                    UpdateMotor((playerTransform.position - transform.position).normalized);
-                }
-            }
-            else
-            {
-                UpdateMotor(startingPosition - transform.position);
-            }
+            bossHUD.gameObject.SetActive(true);
+            bossName.text = setBossName;
         }
         else
         {
-            UpdateMotor(startingPosition - transform.position);
-            chasing = false;
+            bossHUD.gameObject.SetActive(false);
         }
+    }
 
-        //Collison mechanic
-        collidingWithPlayer = false;
-        hitBox.OverlapCollider(filter, hits);
-        for (int i = 0; i < hits.Length; i++)
-        {
-            if (hits[i] == null)
-                continue;
+    protected override void ReceiveDamage(Damage dmg)
+    {
+        if (!isAlive)
+            return;
 
-            if (hits[i].tag == "Fighter" && hits[i].name == "Player")
-            {
-                collidingWithPlayer = true;
-            }
-
-            hits[i] = null;
-        }
+        base.ReceiveDamage(dmg);
+        float ratio = (float)hitPoints / (float)maxHitpoints;
+        bossHpBar.localScale = new Vector3(ratio, 1, 1);
     }
 
     protected override void Death()
     {
-        Destroy(gameObject);
-        GameManager.instance.experience += xpValue;
-        GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 10, 0.5f);
+        base.Death();
+        bossHpBar.localScale = Vector3.one;
+        bossHUD.gameObject.SetActive(false);
+        isAlive = false;
         portal.SetActive(true);
-        chest.SetActive(true);
+        //block.SetActive(false);
     }
 }
