@@ -2056,8 +2056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cfa7e43b59f14a899bf3e03c85386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 8
+  maxHitpoints: 8
   pushRecoverySpeed: 0.2
   ySpeed: 0.5
   xSpeed: 0.75
@@ -2098,7 +2098,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.011054404}
+  m_Offset: {x: -0.0002824217, y: -0.016679592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2109,7 +2109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.14268778}
+  m_Size: {x: 0.09917393, y: 0.15393816}
   m_EdgeRadius: 0
 --- !u!212 &206692419
 SpriteRenderer:
@@ -50954,8 +50954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
   Object: {fileID: 1606911013}
 --- !u!61 &327294651
@@ -51145,8 +51145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &329594806
 BoxCollider2D:
@@ -51287,8 +51287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cfa7e43b59f14a899bf3e03c85386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 8
+  maxHitpoints: 8
   pushRecoverySpeed: 0.2
   ySpeed: 0.5
   xSpeed: 0.75
@@ -51329,7 +51329,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.011054404}
+  m_Offset: {x: -0.0002824217, y: -0.016679592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -51340,7 +51340,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.14268778}
+  m_Size: {x: 0.09917393, y: 0.15393816}
   m_EdgeRadius: 0
 --- !u!212 &335672782
 SpriteRenderer:
@@ -51582,7 +51582,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0009227991, y: -0.043531865}
+  m_Offset: {x: 0.00020074844, y: -0.03631115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.65}
@@ -51593,7 +51593,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27074027, y: 0.45514935}
+  m_Size: {x: 0.2028668, y: 0.3309555}
   m_EdgeRadius: 0
 --- !u!95 &345429300
 Animator:
@@ -53286,7 +53286,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0009227991, y: -0.043531865}
+  m_Offset: {x: 0.00020074844, y: -0.03631115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.65}
@@ -53297,7 +53297,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27074027, y: 0.45514935}
+  m_Size: {x: 0.2028668, y: 0.3309555}
   m_EdgeRadius: 0
 --- !u!95 &446319703
 Animator:
@@ -55577,8 +55577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &535946497
 SpriteRenderer:
@@ -55779,7 +55779,6 @@ GameObject:
   - component: {fileID: 548462736}
   - component: {fileID: 548462738}
   - component: {fileID: 548462737}
-  - component: {fileID: 548462739}
   m_Layer: 12
   m_Name: Middle
   m_TagString: Untagged
@@ -58367,22 +58366,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &548462739
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548462735}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
 --- !u!4 &549912009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3935301046496166172, guid: 69429d5f882a5c045b6d9b50db75230d, type: 3}
@@ -59138,8 +59121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &618818137
 SpriteRenderer:
@@ -60528,8 +60511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &739616679
 BoxCollider2D:
@@ -61598,8 +61581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &832472559
 BoxCollider2D:
@@ -62166,6 +62149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894919093}
   - component: {fileID: 894919094}
+  - component: {fileID: 894919095}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -62238,6 +62222,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &894919095
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894919092}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.029949546, y: -1.2281467}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.7, y: 5.09}
+    newSize: {x: 3.7, y: 5.09}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3220809, y: 2.1544297}
+  m_EdgeRadius: 0
 --- !u!1 &897864973
 GameObject:
   m_ObjectHideFlags: 0
@@ -78975,8 +78985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
   Object: {fileID: 1490857011}
 --- !u!61 &968765764
@@ -79513,8 +79523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &1008088743
 SpriteRenderer:
@@ -80142,7 +80152,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!1 &1033309472
 GameObject:
   m_ObjectHideFlags: 0
@@ -80214,8 +80224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
   Object: {fileID: 73362412}
 --- !u!212 &1033309476
@@ -80524,8 +80534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cfa7e43b59f14a899bf3e03c85386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 8
+  maxHitpoints: 8
   pushRecoverySpeed: 0.2
   ySpeed: 0.5
   xSpeed: 0.75
@@ -80566,7 +80576,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.011054404}
+  m_Offset: {x: -0.0002824217, y: -0.016679592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -80577,7 +80587,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.14268778}
+  m_Size: {x: 0.09917393, y: 0.15393816}
   m_EdgeRadius: 0
 --- !u!212 &1051408406
 SpriteRenderer:
@@ -80962,8 +80972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
   Object: {fileID: 435068581}
 --- !u!61 &1067764357
@@ -81464,8 +81474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &1132958471
 BoxCollider2D:
@@ -81905,8 +81915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cfa7e43b59f14a899bf3e03c85386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 8
+  maxHitpoints: 8
   pushRecoverySpeed: 0.2
   ySpeed: 0.5
   xSpeed: 0.75
@@ -81947,7 +81957,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.011054404}
+  m_Offset: {x: -0.0002824217, y: -0.016679592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -81958,7 +81968,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.14268778}
+  m_Size: {x: 0.09917393, y: 0.15393816}
   m_EdgeRadius: 0
 --- !u!212 &1223857903
 SpriteRenderer:
@@ -82273,8 +82283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
   Object: {fileID: 538775413}
 --- !u!4 &1247301859 stripped
@@ -83530,8 +83540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 1
-  maxHitpoints: 1
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &1328413871
 SpriteRenderer:
@@ -83954,8 +83964,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &1347799765
 SpriteRenderer:
@@ -120634,8 +120644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &1406920305
 BoxCollider2D:
@@ -121153,8 +121163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
   Object: {fileID: 139031851}
 --- !u!61 &1438727164
@@ -121628,8 +121638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &1478297901
 SpriteRenderer:
@@ -122775,8 +122785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
   Object: {fileID: 1051222096}
 --- !u!212 &1530889163
@@ -124137,8 +124147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &1660009760
 BoxCollider2D:
@@ -124267,8 +124277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &1666518431
 BoxCollider2D:
@@ -124715,8 +124725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e965e4abb5709fe4aa12d3a4f8d79f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 30
-  maxHitpoints: 30
+  hitPoints: 20
+  maxHitpoints: 20
   pushRecoverySpeed: 0.2
   ySpeed: 0.65
   xSpeed: 0.9
@@ -124876,8 +124886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 3
+  maxHitpoints: 3
   pushRecoverySpeed: 0.2
 --- !u!61 &1705139281
 BoxCollider2D:
@@ -125018,8 +125028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cfa7e43b59f14a899bf3e03c85386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 8
+  maxHitpoints: 8
   pushRecoverySpeed: 0.2
   ySpeed: 0.5
   xSpeed: 0.75
@@ -125060,7 +125070,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.011054404}
+  m_Offset: {x: -0.0002824217, y: -0.016679592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -125071,7 +125081,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.14268778}
+  m_Size: {x: 0.09917393, y: 0.15393816}
   m_EdgeRadius: 0
 --- !u!212 &1731928872
 SpriteRenderer:
@@ -125193,8 +125203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cfa7e43b59f14a899bf3e03c85386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 8
+  maxHitpoints: 8
   pushRecoverySpeed: 0.2
   ySpeed: 0.5
   xSpeed: 0.75
@@ -125235,7 +125245,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.011054404}
+  m_Offset: {x: -0.0002824217, y: -0.016679592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -125246,7 +125256,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.14268778}
+  m_Size: {x: 0.09917393, y: 0.15393816}
   m_EdgeRadius: 0
 --- !u!212 &1735030048
 SpriteRenderer:
@@ -125729,8 +125739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8c5f910dee872488c902e1fe5645fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
   Object: {fileID: 845798090}
 --- !u!212 &1790706701
@@ -127307,8 +127317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &1924440043
 SpriteRenderer:
@@ -128774,8 +128784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf867d96e574ea34c9503b40aa4da6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  maxHitpoints: 5
+  hitPoints: 2
+  maxHitpoints: 2
   pushRecoverySpeed: 0.2
 --- !u!212 &2039317681
 SpriteRenderer:
@@ -129775,8 +129785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364cfa7e43b59f14a899bf3e03c85386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  maxHitpoints: 10
+  hitPoints: 8
+  maxHitpoints: 8
   pushRecoverySpeed: 0.2
   ySpeed: 0.5
   xSpeed: 0.75
@@ -129798,7 +129808,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.011054404}
+  m_Offset: {x: -0.0002824217, y: -0.016679592}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129809,7 +129819,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.14268778}
+  m_Size: {x: 0.09917393, y: 0.15393816}
   m_EdgeRadius: 0
 --- !u!212 &2105163250
 SpriteRenderer:
