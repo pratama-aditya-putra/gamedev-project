@@ -15,7 +15,8 @@ public class Player : Mover
     private float lastLaunch;
     private float launchCooldown = 0.8f;
     private Transform parent;
-    
+    public Rigidbody2D rigidbody2d;
+
     //Mana mechanic
     public float maxMana = 12;
     public float Mana = 12;
@@ -54,6 +55,7 @@ public class Player : Mover
         lastImmune = Time.time;
         pushDirection = Vector3.zero;
     }
+
     private void Update()
     {
 
@@ -108,7 +110,8 @@ public class Player : Mover
         if (DialogueManager.isActive == true) return;
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        if(isAlive)
+
+        if (isAlive)
             UpdateMotor(new Vector3(x, y, 0));
     }
 

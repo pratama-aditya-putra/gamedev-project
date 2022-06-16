@@ -6,6 +6,7 @@ public class Mover : Fighter
 {
 
     protected BoxCollider2D boxCollider;
+    protected Rigidbody2D rb;
     protected RaycastHit2D hit;
     protected Vector3 moveDelta;
     public float ySpeed = 0.75f;
@@ -18,6 +19,7 @@ public class Mover : Fighter
     protected virtual void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     protected virtual void UpdateMotor(Vector3 input)
@@ -37,8 +39,10 @@ public class Mover : Fighter
         //Reduce push force based from recovery speed
         pushDirection = Vector3.Lerp(pushDirection,Vector3.zero,pushRecoverySpeed);
 
+        rb.velocity = moveDelta;
+
         //Making sure we can move in this direction, by casting a box there first, if the box return null then we can move 
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        /*hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
 
@@ -58,6 +62,6 @@ public class Mover : Fighter
 
         }
         else
-            pushDirection = Vector3.zero;
+            pushDirection = Vector3.zero;*/
     }
 }

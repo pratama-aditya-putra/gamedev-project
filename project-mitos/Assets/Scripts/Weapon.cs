@@ -25,7 +25,7 @@ public class Weapon : Collidable
 
     protected override void Start()
     {
-        base.Start();
+        base.Start(); 
         anim = GetComponent<Animator>();
     }
 
@@ -45,6 +45,8 @@ public class Weapon : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
+        if (coll.name == "Collision")
+            Physics2D.IgnoreCollision(boxCollider2D,coll,true);
         if(coll.tag == "Fighter")
         {
             if (coll.name == "Player")

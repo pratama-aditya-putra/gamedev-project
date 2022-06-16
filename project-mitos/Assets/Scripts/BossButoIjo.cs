@@ -18,13 +18,17 @@ public class BossButoIjo : Enemy
     public GameObject peti;
     public GameObject itemReward;
 
-    private void Update()
-    {
-    }
+    public float playerDistance;
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
+        playerDistance = Vector3.Distance(GameManager.instance.player.transform.position, transform.position);
+        animator.SetFloat("Speed", moveDelta.magnitude);
+        if(playerDistance < attackRange)
+            animator.SetBool("Attack", true);
+        else
+            animator.SetBool("Attack", false);
         if (chasing == true)
         {
             bossHUD.gameObject.SetActive(true);
@@ -34,17 +38,17 @@ public class BossButoIjo : Enemy
         {
             bossHUD.gameObject.SetActive(false);
         }
-        if (transform.position == startingPosition)
+        /*if (Mathf.Approximately(transform.position.x, startingPosition.x) && Mathf.Approximately(transform.position.y, startingPosition.y))
         {
+            animator.SetTrigger("Idle");
             animator.ResetTrigger("Run");
             moveDelta = Vector3.zero;
         }
-        if (moveDelta.x != 0 || moveDelta.y != 0)
+        else if (!Mathf.Approximately(moveDelta.x, 0.0f) || !Mathf.Approximately(moveDelta.y, 0.0f))
         {
             animator.SetTrigger("Run");
-            if (moveDelta.x < 0)
-                transform.localScale = new Vector3(-sizeX, sizeY, 1);
-        }
+        }*/
+
     }
 
     protected override void ReceiveDamage(Damage dmg)

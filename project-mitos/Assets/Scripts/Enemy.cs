@@ -10,8 +10,10 @@ public class Enemy : Mover
     //Logic
     public float triggerRange = 0.3f;
     public float chaseLength = 1.0f;
+    public float attackRange = 0.3f;
 
     public bool chasing;
+    public bool attacking;
     private bool collidingWithPlayer;
     private Transform  playerTransform;
     protected Vector3 startingPosition;
@@ -32,12 +34,13 @@ public class Enemy : Mover
     protected virtual void FixedUpdate()
     {
         //Checking if position of player is inside the range
-        if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
+        if (Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
             if(Vector3.Distance(playerTransform.position, startingPosition) < triggerRange)
                 chasing = true;
 
-            if(chasing == true)
+
+            if (chasing == true)
             {
                 if (!collidingWithPlayer)
                 {
@@ -77,7 +80,5 @@ public class Enemy : Mover
         Destroy(gameObject);
         GameManager.instance.experience += xpValue;
         GameManager.instance.ShowText("+" + xpValue +  " xp",30,Color.magenta,transform.position,Vector3.up * 10, 0.5f);
-
-
     }
 }
