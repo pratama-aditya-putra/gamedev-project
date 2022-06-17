@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public RectTransform manaPointBar;
     public GameObject hud;
     public GameObject menu;
+    public bool alive;
 
     //Floating text manager
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)

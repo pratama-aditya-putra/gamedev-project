@@ -19,7 +19,12 @@ public class BossButoIjo : Enemy
     public GameObject itemReward;
 
     public float playerDistance;
-
+    protected override void Start()
+    {
+        base.Start();
+        bossHpBar.localScale = Vector3.one;
+        animator = gameObject.GetComponent<Animator>();
+    }
     protected override void FixedUpdate()
     {
         base.FixedUpdate();

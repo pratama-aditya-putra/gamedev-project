@@ -23752,6 +23752,7 @@ MonoBehaviour:
   manaPointBar: {fileID: 1457124745}
   hud: {fileID: 672773537}
   menu: {fileID: 3924882}
+  alive: 0
   peso: 15
   experience: 0
 --- !u!4 &2021287496
@@ -24182,6 +24183,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Name
       value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.x

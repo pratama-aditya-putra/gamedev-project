@@ -8,6 +8,7 @@ public class Projectile : Collidable
 
     public int damagePoint = 3;
     public float pushForce = 2.4f;
+    public string target;
     private float distance = 4.0f;
 
     // Start is called before the first frame update
@@ -36,14 +37,14 @@ public class Projectile : Collidable
     protected override void OnCollide(Collider2D coll)
     {
         Debug.Log("Projectile Collision with " + coll.gameObject);
-        if (coll.name != "Player" && coll.name != "weapon" && coll.name != "upper")
+        if (coll.name != target && coll.name != "weapon" && coll.name != "upper")
                 Destroy(gameObject);
 
 
 
         if (coll.tag == "Fighter")
         {
-            if (coll.name == "Player")
+            if (coll.name == target)
                 return;
 
             //Create a new damage object and then send it to the collided object

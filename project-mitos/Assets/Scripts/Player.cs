@@ -150,9 +150,6 @@ public class Player : Mover
         Vector3 Worldpos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 Worldpos2D = new Vector2(Worldpos.x, Worldpos.y);
 
-        direction = Worldpos2D * 100;
-        direction.Normalize();
-
         direction = Worldpos - transform.position;
         direction.Normalize();
 
