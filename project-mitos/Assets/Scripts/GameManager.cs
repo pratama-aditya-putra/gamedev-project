@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public RectTransform manaPointBar;
     public GameObject hud;
     public GameObject menu;
+    public GameObject transition;
     public bool alive;
 
     //Floating text manager
@@ -173,16 +174,24 @@ public class GameManager : MonoBehaviour
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     //Death menu & respawn
     public void Respawn()
     {
         deathMenuAnim.SetTrigger("Hide");
+        transition.GetComponent<Animator>().SetTrigger("In");
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainDungeon");
         player.Respawn();
     }
 
     public void SaveState()
     {
+        transition.GetComponent<Animator>().SetTrigger("Out");
+
         string s = "";
 
         s += "0" + "|";
@@ -200,6 +209,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+        transition.GetComponent<Animator>().SetTrigger("In");
         string temp = "";
         SceneManager.sceneLoaded -= LoadState;
         if (!PlayerPrefs.HasKey("SaveState"))
