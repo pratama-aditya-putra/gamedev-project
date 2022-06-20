@@ -95,6 +95,11 @@ public class Player : Mover
                 Launch();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GameManager.instance.UsePotion();
+        }
     }
 
     protected void OnMagicSpell(float cost)

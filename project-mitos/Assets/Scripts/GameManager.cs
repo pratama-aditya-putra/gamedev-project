@@ -181,6 +181,30 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void SetPotion(Item item)
+    {
+        potion = item;
+    }
+
+    public void UsePotion()
+    {
+        if (potion == null)
+            return;
+        if (potion.amount <= 0)
+        {
+            potion = null;
+            return;
+        }
+
+        if (potion.itemId == 2001)
+            player.Heal(3);
+        if (potion.itemId == 2002)
+            player.Mana += 2;
+        potion.amount--;
+        if (potion.amount <= 0)
+            potion = null;
+    }
+
     //Death menu & respawn
     public void Respawn()
     {
