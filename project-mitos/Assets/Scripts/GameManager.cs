@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -106,15 +107,22 @@ public class GameManager : MonoBehaviour
     //Add and remove item
     public void AddItem(Item newItem)
     {
+        GameObject temp = new GameObject();
         for(int i=0;i < items.Count;i++)
         {
             if (items[i].itemId == newItem.itemId)
             {
-                items[i].amount++;
+                items[i].amount+=newItem.amount;
                 return;
             }
         }
-        items.Add(newItem);
+        temp.gameObject.AddComponent<Item>();
+        temp.gameObject.GetComponent<Item>().itemName = newItem.itemName;
+        temp.gameObject.GetComponent<Item>().itemId = newItem.itemId;
+        temp.gameObject.GetComponent<Item>().amount = newItem.amount;
+        temp.gameObject.AddComponent<Image>();
+        temp.gameObject.GetComponent<Image>().sprite = newItem.gameObject.GetComponent<Image>().sprite;
+        items.Add(temp.gameObject.GetComponent<Item>());
     }
 
     public void RemoveItem(Item redItem)
@@ -183,7 +191,9 @@ public class GameManager : MonoBehaviour
 
     public void SetPotion(Item item)
     {
-        potion = item;
+        potion.name = item.name;
+        potion.itemId = item.itemId;
+        potion.amount = item.amount;
     }
 
     public void UsePotion()
@@ -203,6 +213,7 @@ public class GameManager : MonoBehaviour
         potion.amount--;
         if (potion.amount <= 0)
             potion = null;
+            return;
     }
 
     //Death menu & respawn
@@ -234,7 +245,6 @@ public class GameManager : MonoBehaviour
         {
             s += item.itemId.ToString();
         }
-        s += "|";
 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("SaveState");
@@ -265,12 +275,22 @@ public class GameManager : MonoBehaviour
             temp += data[4][i] + data[4][i+1] + data[4][i + 2] + data[4][i + 3];
             foreach(Item item in itemsPrefabs)
             {
-                if(item.itemId == int.Parse(temp))
+                if(item.itemId == long.Parse(temp))
                 {
                     AddItem(item);
                 }
             }
         }
+
+        /*
+        foreach (Item item in itemsPrefabs)
+        {
+            if (item.itemId == int.Parse(data[5]))
+            {
+                potion = item;
+                Debug.Log("Potion = " + potion.itemId.ToString());
+            }
+        }*/
 
         Debug.Log("LoadState Weapon Level = " + int.Parse(data[3]));
 

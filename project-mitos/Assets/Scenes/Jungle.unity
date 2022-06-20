@@ -59095,7 +59095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603885993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.627, y: -0.537, z: 0}
+  m_LocalPosition: {x: -2.28, y: 6.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1844250626}
@@ -83771,7 +83771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265877044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.2, y: -0.21, z: 0}
+  m_LocalPosition: {x: -2.91, y: 7.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -124067,6 +124067,7 @@ GameObject:
   - component: {fileID: 1558317486}
   - component: {fileID: 1558317485}
   - component: {fileID: 1558317484}
+  - component: {fileID: 1558317489}
   m_Layer: 5
   m_Name: Cursor Canvas(inven)
   m_TagString: Untagged
@@ -124167,6 +124168,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1558317489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558317483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d45ef9d2cdd764f9f9f5d37ba21cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1560162079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3340403025647491556, guid: 19c2ee7cc8aaa7340a6ddd22602bb5e2, type: 3}

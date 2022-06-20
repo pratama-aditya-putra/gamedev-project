@@ -20,40 +20,47 @@ public class CharacterMenu : MonoBehaviour
     public Slot potionSlots;
     public Text potionAmount;
 
+    private void Start()
+    {
+        UpdateMenu();
+    }
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))
         {
             if (currentItem != null)
             {
-                Debug.Log(currentItem.itemId);
                 costumCursor.gameObject.SetActive(false);
                 if(currentItem.itemId > 2000)
                 {
                     Slot nearestSlot = null;
                     nearestSlot = potionSlots;
-                    GameObject tempObject = Instantiate(currentItem.gameObject);
                     /*tempObject.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
                     tempItem.itemName = currentItem.itemName;
                     tempItem.itemId = currentItem.itemId;
                     tempItem.amount = currentItem.amount;*/
-                    nearestSlot.gameObject.SetActive(true);
-                    nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-                    if (nearestSlot.item != null)
+                    nearestSlot.item.gameObject.SetActive(true);
+                    nearestSlot.item.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
+                    if (nearestSlot.item.itemId != 0)
                     {
                         if (nearestSlot.item.itemId == currentItem.itemId)
                             nearestSlot.item.amount += currentItem.amount;
                     }
-                    else
-                        nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
+                    else if(nearestSlot.item.itemId == 0)
+                    {
+                        nearestSlot.item.itemId = currentItem.itemId;
+                        nearestSlot.item.itemName = currentItem.itemName;
+                        nearestSlot.item.amount = currentItem.amount;
+                        currentItem.gameObject.SetActive(false);
+                    }
                     potionAmount.text = nearestSlot.item.amount.ToString();
                     GameManager.instance.SetPotion(nearestSlot.item);
 
                     for(int i=0;i< currentItem.amount; i++)
                         GameManager.instance.RemoveItem(nearestSlot.item);
                     UpdateMenu();
+                    currentItem = null;
                 }
-                currentItem = null;
             }
         }
     }
@@ -61,9 +68,13 @@ public class CharacterMenu : MonoBehaviour
     public void OnClickSlot(Slot slot)
     {
         GameManager.instance.AddItem(slot.item);
-        slot.item = null;
-        slot.gameObject.SetActive(false);
-        GameManager.instance.potion = null;
+        slot.item.itemId = 0;
+        slot.item.itemName = "";
+        slot.item.amount = 0;
+        slot.item.gameObject.SetActive(false);
+        GameManager.instance.potion.itemId = 0;
+        GameManager.instance.potion.itemName = "";
+        GameManager.instance.potion.amount = 0;
         UpdateMenu();
     }
 
@@ -75,36 +86,6 @@ public class CharacterMenu : MonoBehaviour
             costumCursor.gameObject.SetActive(true);
             costumCursor.sprite = currentItem.GetComponent<Image>().sprite;
         }
-    }
-
-    //Character Selection
-    public void OnArrowClick(bool right)
-    {
-        if (right)
-        {
-            currentCharacterSelection++;
-
-            //If no more character
-            if (currentCharacterSelection == GameManager.instance.playerSprites.Count)
-                currentCharacterSelection = 0;
-
-            OnSelectionChange();
-        }
-        else
-        {
-            currentCharacterSelection++;
-
-            //If no more character
-            if (currentCharacterSelection < 0)
-                currentCharacterSelection = GameManager.instance.playerSprites.Count - 1;
-
-            OnSelectionChange();
-        }
-    }
-
-    private void OnSelectionChange()
-    {
-        characterSelectionSPrite.sprite = GameManager.instance.playerSprites[currentCharacterSelection];
     }
 
     //Weapon Upgrade 
@@ -136,12 +117,15 @@ public class CharacterMenu : MonoBehaviour
 
         if(GameManager.instance.potion != null)
         {
-            potionSlots.item = GameManager.instance.potion;
+            if(GameManager.instance.potion.itemId != 0)
+                potionSlots.item.amount = GameManager.instance.potion.amount;
         }
         else
         {
-            potionSlots.item = null;
-            potionSlots.gameObject.SetActive(false);
+            potionSlots.item.itemId = 0;
+            potionSlots.item.amount = 0;
+            potionSlots.item.itemName = "";
+            potionSlots.item.gameObject.SetActive(false);
         }
 
         //Weapon
