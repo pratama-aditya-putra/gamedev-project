@@ -15,6 +15,44 @@ public class CharacterMenu : MonoBehaviour
     public RectTransform xpBar;
     public List<Item> inventoryItem;
     public List<Text> inventoryItemAmount;
+    private Item currentItem;
+    public Image costumCursor;
+    public Slot potionSlots;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (currentItem != null)
+            {
+                costumCursor.gameObject.SetActive(false);
+                Slot nearestSlot = null;
+                nearestSlot = potionSlots;
+                GameObject tempObject = Instantiate(currentItem.gameObject);
+                /*tempObject.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
+                tempItem.itemName = currentItem.itemName;
+                tempItem.itemId = currentItem.itemId;
+                tempItem.amount = currentItem.amount;*/
+                nearestSlot.gameObject.SetActive(true);
+                nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
+                nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
+                currentItem = null;
+
+                GameManager.instance.RemoveItem(nearestSlot.item);
+                UpdateMenu();
+            }
+        }
+    }
+
+    public void OnMouseDownItem(Item item)
+    {
+        if (currentItem == null)
+        {
+            currentItem = item;
+            costumCursor.gameObject.SetActive(true);
+            costumCursor.sprite = currentItem.GetComponent<Image>().sprite;
+        }
+    }
 
     //Character Selection
     public void OnArrowClick(bool right)
@@ -89,10 +127,14 @@ public class CharacterMenu : MonoBehaviour
             float completionRatio = (float)currXpIntoLevel / (float)diff;
             xpBar.localScale = new Vector3(completionRatio, 1, 1);
             xpText.text = currXpIntoLevel + " / " + diff;
-        } 
+        }
 
         //Item mechanic
-        for(int i=0;i < GameManager.instance.items.Count; i++)
+        for (int i = 0; i < 18; i++)
+        {
+            inventoryItem[i].gameObject.SetActive(false);
+        }
+        for (int i=0;i < GameManager.instance.items.Count; i++)
         {
             inventoryItem[i].GetComponent<Image>().sprite = GameManager.instance.items[i].GetComponent<Image>().sprite;
             inventoryItem[i].itemName = GameManager.instance.items[i].itemName;

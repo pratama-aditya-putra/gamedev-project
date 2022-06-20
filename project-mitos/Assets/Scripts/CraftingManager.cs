@@ -67,7 +67,16 @@ public class CraftingManager : MonoBehaviour
                 tempItem.amount = currentItem.amount;*/
                 nearestSlot.gameObject.SetActive(true);
                 nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-                nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
+                if (itemLists[nearestSlot.index] != null)
+                {
+                    OnClickSlot(nearestSlot);
+                    nearestSlot.gameObject.SetActive(true);
+                    nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
+                }
+                else
+                {
+                    nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
+                }
                 itemLists[nearestSlot.index] = tempObject.gameObject.GetComponent<Item>();
                 CheckForCreatedRecipes();
                 currentItem = null;
@@ -125,7 +134,6 @@ public class CraftingManager : MonoBehaviour
             craftingSlots[i].gameObject.SetActive(false);
         }
         slot.gameObject.SetActive(false);
-        GameManager.instance.SaveState();
         UpdateInventory();
     }
 

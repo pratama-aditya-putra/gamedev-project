@@ -162,7 +162,7 @@ public class Player : Mover
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.transform.Rotate(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
-        projectile.Launch(direction * 4, 20);
+        projectile.Launch(direction * 4, 15);
     }
 
 }

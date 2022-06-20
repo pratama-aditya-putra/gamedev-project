@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public List<int> expTable;
     public List<Item> itemsPrefabs;
     public List<Item> items;
+    public Item potion;
 
     //References
     public Player player;
@@ -185,7 +186,13 @@ public class GameManager : MonoBehaviour
     {
         deathMenuAnim.SetTrigger("Hide");
         transition.GetComponent<Animator>().SetTrigger("In");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainDungeon");
+        Scene scene = SceneManager.GetActiveScene();
+        if(scene.name == "Jungle" || scene.name == "Jungle 1")
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Jungle");
+        else if (scene.name == "MainDungeon" || scene.name == "Dungeon1")
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainDungeon");
+        else if (scene.name == "Underwater 1" || scene.name == "Underwater")
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Underwater");
         player.Respawn();
     }
 
