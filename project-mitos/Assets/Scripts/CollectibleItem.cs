@@ -18,7 +18,7 @@ public class CollectibleItem : Colletible
         if (!collected)
         {
             collected = true;
-            GameManager.instance.AddItem(item);
+            GameManager.instance.inventory.AddItem(item);
             GameManager.instance.ShowText("+ " + item.itemName, 25, Color.yellow, transform.position, Vector3.up * 30, 0.8f);
             Destroy(gameObject);
         }

@@ -24,18 +24,20 @@ public class CraftingManager : MonoBehaviour
 
     public void UpdateInventory()
     {
-        //Item mechanic for 
+        //Item mechanic
         for (int i = 0; i < 18; i++)
         {
             inventoryItem[i].gameObject.SetActive(false);
+            //inventoryItem[i].gameObject.SetActive(false);
         }
-        for (int i = 0; i < GameManager.instance.items.Count; i++)
+
+        for (int i = 0; i < GameManager.instance.inventory.GetItemList().Count; i++)
         {
-            inventoryItem[i].GetComponent<Image>().sprite = GameManager.instance.items[i].GetComponent<Image>().sprite;
-            inventoryItem[i].itemName = GameManager.instance.items[i].itemName;
-            inventoryItem[i].itemId = GameManager.instance.items[i].itemId;
-            inventoryItem[i].amount = GameManager.instance.items[i].amount;
+            inventoryItem[i].itemId = GameManager.instance.inventory.GetItemList()[i].itemId;
+            inventoryItem[i].itemName = GameManager.instance.inventory.GetItemList()[i].itemName;
+            inventoryItem[i].amount = GameManager.instance.inventory.GetItemList()[i].amount;
             inventoryItemAmount[i].text = inventoryItem[i].amount.ToString();
+            inventoryItem[i].GetComponent<Image>().sprite = GameManager.instance.inventory.GetItemIcon(inventoryItem[i].itemId);
             inventoryItem[i].gameObject.SetActive(true);
         }
     }
@@ -60,28 +62,26 @@ public class CraftingManager : MonoBehaviour
                         nearestSlot = slot;
                     }
                 }
-                GameObject tempObject = Instantiate(currentItem.gameObject);
+                //GameObject tempObject = Instantiate(currentItem.gameObject);
                 /*tempObject.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
                 tempItem.itemName = currentItem.itemName;
                 tempItem.itemId = currentItem.itemId;
                 tempItem.amount = currentItem.amount;*/
                 nearestSlot.gameObject.SetActive(true);
                 nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-                if (itemLists[nearestSlot.index] != null)
+                if (nearestSlot.item.itemId != 0)
                 {
                     OnClickSlot(nearestSlot);
-                    nearestSlot.gameObject.SetActive(true);
-                    nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
                 }
-                else
-                {
-                    nearestSlot.item = tempObject.gameObject.GetComponent<Item>();
-                }
-                itemLists[nearestSlot.index] = tempObject.gameObject.GetComponent<Item>();
+                nearestSlot.item.itemName = currentItem.itemName;
+                nearestSlot.item.itemId = currentItem.itemId;
+                nearestSlot.item.amount = currentItem.amount;
+                Debug.Log(nearestSlot.item);
+                itemLists[nearestSlot.index] = nearestSlot.item;
                 CheckForCreatedRecipes();
                 currentItem = null;
 
-                GameManager.instance.RemoveItem(nearestSlot.item);
+                GameManager.instance.inventory.RemoveItem(nearestSlot.item);
                 UpdateInventory();
             }
         }
@@ -121,16 +121,14 @@ public class CraftingManager : MonoBehaviour
 
     public void OnClickResult(Slot slot)
     {
-        GameManager.instance.AddItem(slot.item);
+        GameManager.instance.inventory.AddItem(slot.item);
         slot.item = null;
         for(int i = 0; i < 4; i++)
         {
-            Item temp = new Item();
-            temp.itemId = 0;
-            temp.itemName = "";
-            temp.amount = 0;
             itemLists[i] = null;
-            craftingSlots[i].item = temp;
+            craftingSlots[i].item.itemId = 0;
+            craftingSlots[i].item.itemName = "";
+            craftingSlots[i].item.amount = 0;
             craftingSlots[i].gameObject.SetActive(false);
         }
         slot.gameObject.SetActive(false);
@@ -139,8 +137,10 @@ public class CraftingManager : MonoBehaviour
 
     public void OnClickSlot(Slot slot)
     {
-        GameManager.instance.AddItem(slot.item);
-        slot.item = null;
+        GameManager.instance.inventory.AddItem(new Item { itemId = slot.item.itemId, itemName = slot.item.itemName, amount = slot.item.amount });
+        slot.item.itemId = 0;
+        slot.item.itemName = "";
+        slot.item.amount = 0;
         itemLists[slot.index] = null;
         slot.gameObject.SetActive(false);
         UpdateInventory();
@@ -151,9 +151,9 @@ public class CraftingManager : MonoBehaviour
     {
         if(currentItem == null)
         {
-            Debug.Log("Clicked");
             currentItem = item;
             costumCursor.gameObject.SetActive(true);
+            Debug.Log(currentItem.itemName);
             costumCursor.sprite = currentItem.GetComponent<Image>().sprite;
         }
     }

@@ -32,9 +32,7 @@ public class GameManager : MonoBehaviour
     public List<Sprite> weaponSprites;
     public List<int> weaponPrices;
     public List<int> expTable;
-    public List<Item> itemsPrefabs;
-    public List<Item> items;
-    public Item potion;
+    public Inventory inventory;
 
     //References
     public Player player;
@@ -104,46 +102,6 @@ public class GameManager : MonoBehaviour
         return r;
     }
 
-    //Add and remove item
-    public void AddItem(Item newItem)
-    {
-        GameObject temp = new GameObject();
-        for(int i=0;i < items.Count;i++)
-        {
-            if (items[i].itemId == newItem.itemId)
-            {
-                items[i].amount+=newItem.amount;
-                return;
-            }
-        }
-        temp.gameObject.AddComponent<Item>();
-        temp.gameObject.GetComponent<Item>().itemName = newItem.itemName;
-        temp.gameObject.GetComponent<Item>().itemId = newItem.itemId;
-        temp.gameObject.GetComponent<Item>().amount = newItem.amount;
-        temp.gameObject.AddComponent<Image>();
-        temp.gameObject.GetComponent<Image>().sprite = newItem.gameObject.GetComponent<Image>().sprite;
-        items.Add(temp.gameObject.GetComponent<Item>());
-    }
-
-    public void RemoveItem(Item redItem)
-    {
-        for(int i = 0; i < items.Count;i++)
-        {
-            if (items[i].itemId == redItem.itemId)
-            {
-                if (items[i].amount > 1)
-                {
-                    items[i].amount--;
-                    return;
-                }
-                else
-                {
-                    items.RemoveAt(i);
-                }
-            }
-        }
-    }
-
     public int GetXptoLevel(int level)
     {
         int r = 0;
@@ -190,14 +148,24 @@ public class GameManager : MonoBehaviour
     }
 
     public void SetPotion(Item item)
-    {
-        potion.name = item.name;
-        potion.itemId = item.itemId;
-        potion.amount = item.amount;
+    {/*
+        if(potion != null)
+        {
+            potion.itemName = item.itemName;
+            potion.itemId = item.itemId;
+            potion.amount = item.amount;
+        }
+        else
+        {
+            potion = new Item();
+            potion.itemName = item.itemName;
+            potion.itemId = item.itemId;
+            potion.amount = item.amount;
+        }*/
     }
 
     public void UsePotion()
-    {
+    {/*
         if (potion == null)
             return;
         if (potion.amount <= 0)
@@ -213,7 +181,7 @@ public class GameManager : MonoBehaviour
         potion.amount--;
         if (potion.amount <= 0)
             potion = null;
-            return;
+            return;*/
     }
 
     //Death menu & respawn
@@ -241,10 +209,10 @@ public class GameManager : MonoBehaviour
         s += peso.ToString() + "|";
         s += experience.ToString() + "|";
         s += weapon.weaponLevel.ToString() + "|";
-        foreach(Item item in items)
+        /*foreach(Item item in items)
         {
             s += item.itemId.ToString();
-        }
+        }*/
 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("SaveState");
@@ -270,7 +238,7 @@ public class GameManager : MonoBehaviour
         weapon.SetWeaponLevel(int.Parse(data[3]));
 
         //Inventory
-        for(int i = 0; i < data[4].Length; i += 4)
+        /*for(int i = 0; i < data[4].Length; i += 4)
         {
             temp += data[4][i] + data[4][i+1] + data[4][i + 2] + data[4][i + 3];
             foreach(Item item in itemsPrefabs)
@@ -280,7 +248,7 @@ public class GameManager : MonoBehaviour
                     AddItem(item);
                 }
             }
-        }
+        }*/
 
         /*
         foreach (Item item in itemsPrefabs)
