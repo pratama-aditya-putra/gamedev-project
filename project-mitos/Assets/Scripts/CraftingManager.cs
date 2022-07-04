@@ -62,26 +62,21 @@ public class CraftingManager : MonoBehaviour
                         nearestSlot = slot;
                     }
                 }
-                //GameObject tempObject = Instantiate(currentItem.gameObject);
-                /*tempObject.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-                tempItem.itemName = currentItem.itemName;
-                tempItem.itemId = currentItem.itemId;
-                tempItem.amount = currentItem.amount;*/
-                nearestSlot.gameObject.SetActive(true);
-                nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
                 if (nearestSlot.item.itemId != 0)
                 {
                     OnClickSlot(nearestSlot);
                 }
+                nearestSlot.gameObject.SetActive(true);
+                nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
                 nearestSlot.item.itemName = currentItem.itemName;
                 nearestSlot.item.itemId = currentItem.itemId;
-                nearestSlot.item.amount = currentItem.amount;
+                nearestSlot.item.amount = 1;
                 Debug.Log(nearestSlot.item);
                 itemLists[nearestSlot.index] = nearestSlot.item;
                 CheckForCreatedRecipes();
                 currentItem = null;
-
                 GameManager.instance.inventory.RemoveItem(nearestSlot.item);
+
                 UpdateInventory();
             }
         }
@@ -137,6 +132,8 @@ public class CraftingManager : MonoBehaviour
 
     public void OnClickSlot(Slot slot)
     {
+        if (slot.item.itemId == 0)
+            return;
         GameManager.instance.inventory.AddItem(new Item { itemId = slot.item.itemId, itemName = slot.item.itemName, amount = slot.item.amount });
         slot.item.itemId = 0;
         slot.item.itemName = "";
@@ -153,7 +150,6 @@ public class CraftingManager : MonoBehaviour
         {
             currentItem = item;
             costumCursor.gameObject.SetActive(true);
-            Debug.Log(currentItem.itemName);
             costumCursor.sprite = currentItem.GetComponent<Image>().sprite;
         }
     }

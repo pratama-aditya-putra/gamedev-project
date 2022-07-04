@@ -26,7 +26,7 @@ public class CharacterMenu : MonoBehaviour
     }
     private void Update()
     {
-        /*if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             if (currentItem != null)
             {
@@ -35,8 +35,8 @@ public class CharacterMenu : MonoBehaviour
                 {
                     Slot nearestSlot = null;
                     nearestSlot = potionSlots;
-                    nearestSlot.gameObject.SetActive(true);
-                    //nearestSlot.GetComponent<Image>().sprite = curre;
+                    nearestSlot.item.gameObject.SetActive(true);
+                    nearestSlot.item.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
                     if (nearestSlot.item.itemId != 0)
                     {
                         if (nearestSlot.item.itemId == currentItem.itemId)
@@ -49,29 +49,26 @@ public class CharacterMenu : MonoBehaviour
                         nearestSlot.item.amount = currentItem.amount;
                     }
                     potionAmount.text = nearestSlot.item.amount.ToString();
-                    GameManager.instance.SetPotion(nearestSlot.item);
-                    Debug.Log(nearestSlot.item.itemId);
 
                     for (int i=0;i< currentItem.amount; i++)
-                        GameManager.instance.RemoveItem(nearestSlot.item);
+                        GameManager.instance.inventory.RemoveItem(nearestSlot.item);
                     UpdateMenu();
-                    currentItem = null;
                 }
             }
-        }*/
+            currentItem = null;
+        }
     }
 
     public void OnClickSlot(Slot slot)
     {
-        /*GameManager.instance.AddItem(slot.item);
+        if (slot.item.itemId == 0)
+            return;
+        GameManager.instance.inventory.AddItem(new Item { itemId = slot.item.itemId, itemName = slot.item.itemName, amount = slot.item.amount });
         slot.item.itemId = 0;
         slot.item.itemName = "";
         slot.item.amount = 0;
-        slot.gameObject.SetActive(false);
-        GameManager.instance.potion.itemId = 0;
-        GameManager.instance.potion.itemName = "";
-        GameManager.instance.potion.amount = 0;
-        UpdateMenu();*/
+        slot.item.gameObject.SetActive(false);
+        UpdateMenu();
     }
 
     public void OnMouseDownItem(Item item)
@@ -80,7 +77,7 @@ public class CharacterMenu : MonoBehaviour
         {
             currentItem = item;
             costumCursor.gameObject.SetActive(true);
-            //costumCursor.sprite = currentItem.GetComponent<Image>().sprite;
+            costumCursor.sprite = currentItem.GetComponent<Image>().sprite;
         }
     }
 
@@ -134,7 +131,7 @@ public class CharacterMenu : MonoBehaviour
         //Meta
         levelText.text = GameManager.instance.GetCurrentLevel().ToString();
         hitpointText.text = GameManager.instance.player.hitPoints.ToString() + " / " + GameManager.instance.player.maxHitpoints.ToString();
-        manapointText.text = GameManager.instance.player.Mana.ToString() + " / " + GameManager.instance.player.maxMana.ToString();
+        manapointText.text = Mathf.Floor(GameManager.instance.player.Mana).ToString() + " / " + GameManager.instance.player.maxMana.ToString();
         pesosText.text = GameManager.instance.peso.ToString();
 
         //Xp bar

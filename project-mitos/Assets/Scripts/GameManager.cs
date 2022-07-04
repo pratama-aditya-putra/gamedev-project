@@ -147,41 +147,22 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetPotion(Item item)
-    {/*
-        if(potion != null)
-        {
-            potion.itemName = item.itemName;
-            potion.itemId = item.itemId;
-            potion.amount = item.amount;
-        }
-        else
-        {
-            potion = new Item();
-            potion.itemName = item.itemName;
-            potion.itemId = item.itemId;
-            potion.amount = item.amount;
-        }*/
-    }
-
     public void UsePotion()
-    {/*
-        if (potion == null)
-            return;
-        if (potion.amount <= 0)
-        {
-            potion = null;
-            return;
-        }
-
-        if (potion.itemId == 2001)
+    {
+        if (inventory.potion.itemId == 2001)
             player.Heal(3);
-        if (potion.itemId == 2002)
+        if (inventory.potion.itemId == 2002)
             player.Mana += 2;
-        potion.amount--;
-        if (potion.amount <= 0)
-            potion = null;
-            return;*/
+        inventory.potion.amount--;
+        if (inventory.potion.amount <= 0)
+        {
+            inventory.potion.itemId = 0;
+            inventory.potion.itemName = "";
+            inventory.potion.amount = 0;
+            inventory.potion.gameObject.SetActive(false);
+            //menu.GetComponent<CharacterMenu>().UpdateMenu();
+        }
+        return;
     }
 
     //Death menu & respawn

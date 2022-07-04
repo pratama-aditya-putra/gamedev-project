@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
         AddItem(new Item{itemId = 1001, amount = 1, itemName = "Beras" });
         AddItem(new Item { itemId = 1002, amount = 3, itemName = "Brotowali" });
         AddItem(new Item { itemId = 1003, amount = 1, itemName = "Cabai" });
+        AddItem(new Item { itemId = 2001, amount = 1, itemName = "Jamu Beras" });
     }
 
 
@@ -29,11 +30,6 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
-        /*temp.gameObject.AddComponent<Item>();
-        temp.gameObject.GetComponent<Item>().itemName = newItem.itemName;
-        temp.gameObject.GetComponent<Item>().itemId = newItem.itemId;
-        temp.gameObject.GetComponent<Item>().amount = newItem.amount;
-        //temp.gameObject.GetComponent<Image>().sprite = newItem.gameObject.GetComponent<Image>().sprite;*/
         itemList.Add(newItem);
     }
 
@@ -68,6 +64,5 @@ public class Inventory : MonoBehaviour
         else
             return itemsIcon[itemId - 2001 + 3];
     }
-
 
 }
