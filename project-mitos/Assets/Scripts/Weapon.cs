@@ -18,6 +18,9 @@ public class Weapon : Collidable
     private float cooldown = 0.5f;
     private float lastSwing;
 
+    //Sound
+    public static bool slash = false;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -35,11 +38,13 @@ public class Weapon : Collidable
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            if(Time.time - lastSwing > cooldown)
+            if (Time.time - lastSwing > cooldown)
             {
                 lastSwing = Time.time;
                 Swing();
+                slash = true;
             }
+            else slash = false;
         }
     }
 

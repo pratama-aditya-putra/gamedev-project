@@ -27,6 +27,12 @@ public class Player : Mover
 
 
     private bool isAlive = true;
+
+    //sound
+    [SerializeField] private AudioSource fireSoundEffect;
+    [SerializeField] private AudioSource slashSoundEffect;
+    [SerializeField] private AudioSource hurtSoundEffect;
+
     protected override void Start()
     {
         base.Start();
@@ -39,6 +45,7 @@ public class Player : Mover
             return;
         base.ReceiveDamage(dmg);
         GameManager.instance.OnHitPointChange();
+        hurtSoundEffect.Play();
     }
 
     protected override void Death()
@@ -93,12 +100,18 @@ public class Player : Mover
                 OnMagicSpell(fireballManaCost);
                 lastLaunch = Time.time;
                 Launch();
+                fireSoundEffect.Play();
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GameManager.instance.UsePotion();
+        }
+
+        if (Weapon.slash == true)
+        {
+            slashSoundEffect.Play();
         }
     }
 
