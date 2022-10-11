@@ -24,6 +24,15 @@ public class CharacterMenu : MonoBehaviour
     {
         UpdateMenu();
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0.0f;
+    }
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1.0f;
+    }
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))

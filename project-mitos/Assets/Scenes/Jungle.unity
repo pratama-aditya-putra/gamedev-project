@@ -59922,7 +59922,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 97969a9b105704041898f5c65d030295, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -62929,7 +62929,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 620132907}
         m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
-        m_MethodName: SetTimeScale
+        m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -130630,7 +130630,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 620132907}
         m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
-        m_MethodName: SetTimeScale
+        m_MethodName: UnpauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
