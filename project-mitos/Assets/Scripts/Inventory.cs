@@ -6,16 +6,17 @@ public class Inventory : MonoBehaviour
 {
     private List<Item> itemList;
     public List<Sprite> itemsIcon;
+    public List<string> itemsName;
     public Item potion;
 
     public Inventory()
     {
         itemList = new List<Item>();
 
-        AddItem(new Item{itemId = 1001, amount = 1, itemName = "Beras" });
+        /*AddItem(new Item{itemId = 1001, amount = 1, itemName = "Beras" });
         AddItem(new Item { itemId = 1002, amount = 3, itemName = "Brotowali" });
         AddItem(new Item { itemId = 1003, amount = 1, itemName = "Cabai" });
-        AddItem(new Item { itemId = 2001, amount = 1, itemName = "Jamu Beras" });
+        AddItem(new Item { itemId = 2001, amount = 1, itemName = "Jamu Beras" });*/
     }
 
 
@@ -63,6 +64,13 @@ public class Inventory : MonoBehaviour
             return itemsIcon[itemId - 1001];
         else
             return itemsIcon[itemId - 2001 + 3];
+    }
+    public string GetItemName(int itemId)
+    {
+        if (itemId < 2000)
+            return itemsName[itemId - 1001];
+        else
+            return itemsName[itemId - 2001 + 3];
     }
 
 }

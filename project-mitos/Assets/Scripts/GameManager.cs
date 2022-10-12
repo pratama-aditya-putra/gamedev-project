@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public GameObject hud;
     public GameObject menu;
     public GameObject transition;
+    public Button pauseButton;
     public bool alive;
 
     //Floating text manager
@@ -142,6 +143,17 @@ public class GameManager : MonoBehaviour
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
+    public void PauseGame()
+    {
+        pauseButton.interactable = false;
+        Time.timeScale = 0.0f;
+
+    }
+    public void ResumeGame()
+    {
+        pauseButton.interactable = true;
+        Time.timeScale = 1.0f;
+    }
     public void QuitGame()
     {
         Application.Quit();
@@ -190,10 +202,11 @@ public class GameManager : MonoBehaviour
         s += peso.ToString() + "|";
         s += experience.ToString() + "|";
         s += weapon.weaponLevel.ToString() + "|";
-        /*foreach(Item item in items)
+        foreach(Item item in inventory.GetItemList())
         {
             s += item.itemId.ToString();
-        }*/
+            s += item.amount.ToString() + "|";
+        }
 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("SaveState");
@@ -219,17 +232,17 @@ public class GameManager : MonoBehaviour
         weapon.SetWeaponLevel(int.Parse(data[3]));
 
         //Inventory
-        /*for(int i = 0; i < data[4].Length; i += 4)
+        int itemId;
+        int itemAmount;
+        if(data.Length >= 4)
         {
-            temp += data[4][i] + data[4][i+1] + data[4][i + 2] + data[4][i + 3];
-            foreach(Item item in itemsPrefabs)
+            for (int i = 4; i < data.Length; i += 4)
             {
-                if(item.itemId == long.Parse(temp))
-                {
-                    AddItem(item);
-                }
+                itemId = int.Parse(data[i].Substring(0, 4));
+                itemAmount = int.Parse(data[i].Substring(4, 1));
+                inventory.AddItem(new Item { itemId = itemId, amount = itemAmount, itemName = inventory.GetItemName(itemId) });
             }
-        }*/
+        }
 
         /*
         foreach (Item item in itemsPrefabs)

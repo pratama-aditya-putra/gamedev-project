@@ -78,7 +78,17 @@ public class Player : Mover
         }
 
         animator.SetFloat("Move X", lookDirection.x);
-        animator.SetFloat("Speed", move.magnitude);
+        
+        if(rigidbody2d.velocity.magnitude > 0.01)
+        {
+            animator.SetTrigger("Walk");
+            animator.ResetTrigger("Idle");
+        }
+        else
+        {
+            animator.SetTrigger("Idle");
+            animator.ResetTrigger("Walk");
+        }
 
 
         if (Mana < maxMana)

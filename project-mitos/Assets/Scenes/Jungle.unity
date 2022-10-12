@@ -59107,7 +59107,7 @@ Transform:
   - {fileID: 1844250626}
   - {fileID: 23599552}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &603885995
 MonoBehaviour:
@@ -59903,7 +59903,7 @@ RectTransform:
   - {fileID: 800233268}
   - {fileID: 459623003}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -60794,7 +60794,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -62927,8 +62927,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 620132907}
-        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+      - m_Target: {fileID: 1104485105}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
@@ -81468,6 +81468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021849926}
   - component: {fileID: 1021849925}
+  - component: {fileID: 1021849927}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -81583,8 +81584,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1021849927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021849924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d45ef9d2cdd764f9f9f5d37ba21cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1031589332
 GameObject:
   m_ObjectHideFlags: 0
@@ -83207,6 +83220,7 @@ MonoBehaviour:
   hud: {fileID: 2027201455}
   menu: {fileID: 620132906}
   transition: {fileID: 1751881848}
+  pauseButton: {fileID: 833355108}
   alive: 0
   peso: 15
   experience: 0
@@ -83234,7 +83248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1113583870
 GameObject:
@@ -84354,7 +84368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265877044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.45, y: -0.33, z: 0}
+  m_LocalPosition: {x: -3.14, y: 3.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -124795,7 +124809,7 @@ RectTransform:
   m_Children:
   - {fileID: 813933348}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -127564,7 +127578,7 @@ RectTransform:
   m_Children:
   - {fileID: 117668856}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -130628,9 +130642,9 @@ MonoBehaviour:
           m_StringArgument: Hide
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 620132907}
-        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
-        m_MethodName: UnpauseGame
+      - m_Target: {fileID: 1104485105}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -131142,7 +131156,7 @@ RectTransform:
   - {fileID: 1796249104}
   - {fileID: 182284779}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -132370,6 +132384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138737782}
   - component: {fileID: 2138737781}
+  - component: {fileID: 2138737783}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -132394,6 +132409,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e84bdc493284245448762a65e11c3a60, type: 3}
   - {fileID: 21300000, guid: 02ee1021bf34ea243abbf92b55f6d827, type: 3}
   - {fileID: -5206644523654691916, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
+  itemsName:
+  - Beras
+  - Brotowali
+  - Cabai
+  - Jamu Beras
   potion: {fileID: 667052931}
 --- !u!224 &2138737782
 RectTransform:
@@ -132407,13 +132427,25 @@ RectTransform:
   m_LocalScale: {x: 0.5975, y: 0.5975, z: 0.5975}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 399.99997, y: 340.58575}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2138737783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138737780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d45ef9d2cdd764f9f9f5d37ba21cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2139011281
 GameObject:
   m_ObjectHideFlags: 0

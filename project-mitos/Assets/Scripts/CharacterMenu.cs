@@ -25,14 +25,6 @@ public class CharacterMenu : MonoBehaviour
         UpdateMenu();
     }
 
-    public void PauseGame()
-    {
-        Time.timeScale = 0.0f;
-    }
-    public void UnpauseGame()
-    {
-        Time.timeScale = 1.0f;
-    }
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))
@@ -107,6 +99,7 @@ public class CharacterMenu : MonoBehaviour
         {
             inventoryItem[i].gameObject.SetActive(false);
         }
+        Debug.Log(GameManager.instance.inventory.GetItemList().Count);
         for (int i = 0; i < GameManager.instance.inventory.GetItemList().Count; i++)
         {
             inventoryItem[i].itemId = GameManager.instance.inventory.GetItemList()[i].itemId;
