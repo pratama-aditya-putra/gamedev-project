@@ -36,11 +36,15 @@ public class Projectile : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        Debug.Log("Projectile Collision with " + coll.gameObject);
-        if (coll.name != target && coll.name != "weapon" && coll.name != "upper")
-                Destroy(gameObject);
-
-
+        /*if (coll.tag == "Hitbox")
+        {
+            coll.GetComponent<Rigidbody>().isKinematic = true;
+            coll.GetComponent<Rigidbody>().detectCollisions = false;
+        }*/
+        if (coll.tag != "Hitbox" && coll.name != "weapon" && coll.name != "upper")
+        {
+            Destroy(gameObject);
+        }
 
         if (coll.tag == "Fighter")
         {

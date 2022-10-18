@@ -17,6 +17,9 @@ public class Player : Mover
     private Transform parent;
     public Rigidbody2D rigidbody2d;
 
+    private bool isHurt;
+    private float hurtDuration;
+
     //Mana mechanic
     public float maxMana = 12;
     public float Mana = 12;
@@ -24,6 +27,12 @@ public class Player : Mover
     public float manaRecoverySpeed = 1.5f;
     public float lastManaRecovery;
     public float fireballManaCost = 3.0f;
+    public float fireballSpeed;
+
+
+    private ContactFilter2D filter;
+    private Rigidbody2D hitBox;
+    private Collider2D[] hits = new Collider2D[10];
 
 
     private bool isAlive = true;
@@ -37,6 +46,7 @@ public class Player : Mover
     {
         base.Start();
         animator = GetComponent<Animator>();
+        hitBox = GetComponent<Rigidbody2D>();
     }
 
     protected override void ReceiveDamage(Damage dmg)
@@ -46,6 +56,7 @@ public class Player : Mover
         base.ReceiveDamage(dmg);
         GameManager.instance.OnHitPointChange();
         hurtSoundEffect.Play();
+        isImmune = true;
     }
 
     protected override void Death()
@@ -63,9 +74,42 @@ public class Player : Mover
         pushDirection = Vector3.zero;
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+        /*
+        hitBox.OverlapCollider(filter, hits);
+        if (isImmune)
+        {
+            for (int i = 0; i < hits.Length; i++)
+            {
+                if (hits[i] == null)
+                    continue;
 
+                if (hits[i].gameObject.layer == LayerMask.NameToLayer("Enemy") /* && hits[i].name == "Player")
+                {
+                    Physics.IgnoreCollision(hits[i].GetComponent<Rigidbody2D>().GetComponent<Collider>(), hitBox.GetComponent<Collider>());
+                }
+
+                hits[i] = null;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < hits.Length; i++)
+            {
+                if (hits[i] == null)
+                    continue;
+
+                if (hits[i].gameObject.layer == LayerMask.NameToLayer("Enemy") /* && hits[i].name == "Player")
+                {
+                    Physics.IgnoreCollision(hits[i].GetComponent<Rigidbody2D>().GetComponent<Collider>(), hitBox.GetComponent<Collider>(), false);
+                }
+
+                hits[i] = null;
+            }
+        }
+        */
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
@@ -122,6 +166,11 @@ public class Player : Mover
         if (Weapon.slash == true)
         {
             slashSoundEffect.Play();
+        }
+
+        if (isHurt)
+        {
+
         }
     }
 
@@ -185,12 +234,24 @@ public class Player : Mover
         GameObject projectileObject = Instantiate(projectilePrefab, transform.position + new Vector3(direction.x, direction.y, transform.position.z) * 0.2f, Quaternion.identity);
         projectileObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("weapon");
         projectileCollider = projectileObject.GetComponent<BoxCollider2D>();
-        projectileCollider.size = new Vector2(0.2155424f, 0.08285652f);
-        projectileCollider.offset = new Vector2(0.005057238f, 0.00119327f);
+        //projectileCollider.size = new Vector2(0.2155424f, 0.08285652f);
+        //projectileCollider.offset = new Vector2(0.005057238f, 0.00119327f);
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.transform.Rotate(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
-        projectile.Launch(direction * 4, 15);
+        projectile.Launch(direction * 4, fireballSpeed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isImmune)
+        {
+            if ((collision.collider.tag == "Hitbox") || (collision.gameObject.layer == LayerMask.NameToLayer("Enemy")))
+            {
+                Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
+                Debug.Log("IMMUNE");
+            }
+        }
     }
 
 }

@@ -2210,6 +2210,7 @@ MonoBehaviour:
   hitPoints: 8
   maxHitpoints: 8
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.5
   xSpeed: 0.75
   sizeX: 1
@@ -51222,6 +51223,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 1606911013}
 --- !u!61 &327294651
 BoxCollider2D:
@@ -51413,6 +51415,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &329594806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51555,6 +51558,7 @@ MonoBehaviour:
   hitPoints: 8
   maxHitpoints: 8
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.5
   xSpeed: 0.75
   sizeX: 1
@@ -55877,6 +55881,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &535946497
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59124,6 +59129,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 603886000}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 1
@@ -59136,6 +59142,7 @@ MonoBehaviour:
   manaRecoverySpeed: 1.5
   lastManaRecovery: 0
   fireballManaCost: 3
+  fireballSpeed: 0
   fireSoundEffect: {fileID: 603886001}
   slashSoundEffect: {fileID: 603886002}
   hurtSoundEffect: {fileID: 603886003}
@@ -59738,6 +59745,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &618818137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61308,6 +61316,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &739616679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -62730,6 +62739,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &832472559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80266,6 +80276,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 1490857011}
 --- !u!61 &968765764
 BoxCollider2D:
@@ -81180,6 +81191,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &1008088743
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -81648,6 +81660,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0
   xSpeed: 0
   sizeX: 1
@@ -81828,6 +81841,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 73362412}
 --- !u!212 &1033309476
 SpriteRenderer:
@@ -82259,6 +82273,7 @@ MonoBehaviour:
   hitPoints: 8
   maxHitpoints: 8
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.5
   xSpeed: 0.75
   sizeX: 1
@@ -82573,6 +82588,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 435068581}
 --- !u!61 &1067764357
 BoxCollider2D:
@@ -83363,6 +83379,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &1132958471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83983,6 +84000,7 @@ MonoBehaviour:
   hitPoints: 8
   maxHitpoints: 8
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.5
   xSpeed: 0.75
   sizeX: 1
@@ -84259,6 +84277,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 538775413}
 --- !u!4 &1247301859 stripped
 Transform:
@@ -85491,6 +85510,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &1328413871
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -85904,6 +85924,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &1347799765
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122624,6 +122645,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &1406920305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122997,6 +123019,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 139031851}
 --- !u!61 &1438727164
 BoxCollider2D:
@@ -123673,6 +123696,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &1478297901
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -124416,6 +124440,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 1051222096}
 --- !u!212 &1530889163
 SpriteRenderer:
@@ -125678,6 +125703,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &1660009760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125808,6 +125834,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &1666518431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126602,6 +126629,7 @@ MonoBehaviour:
   hitPoints: 20
   maxHitpoints: 20
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.65
   xSpeed: 0.9
   sizeX: 1
@@ -126763,6 +126791,7 @@ MonoBehaviour:
   hitPoints: 3
   maxHitpoints: 3
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!61 &1705139281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126905,6 +126934,7 @@ MonoBehaviour:
   hitPoints: 8
   maxHitpoints: 8
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.5
   xSpeed: 0.75
   sizeX: 1
@@ -127080,6 +127110,7 @@ MonoBehaviour:
   hitPoints: 8
   maxHitpoints: 8
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.5
   xSpeed: 0.75
   sizeX: 1
@@ -127950,6 +127981,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   Object: {fileID: 845798090}
 --- !u!212 &1790706701
 SpriteRenderer:
@@ -129559,9 +129591,9 @@ GameObject:
   - component: {fileID: 1897444638}
   - component: {fileID: 1897444640}
   - component: {fileID: 1897444639}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129607,7 +129639,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.015706167}
+  m_Offset: {x: 0, y: -0.021074295}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129618,7 +129650,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09956479, y: 0.088297576}
+  m_Size: {x: 0.09956479, y: 0.14770842}
   m_EdgeRadius: 0
 --- !u!1 &1902733678
 GameObject:
@@ -129943,6 +129975,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &1924440043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -131223,6 +131256,7 @@ MonoBehaviour:
   hitPoints: 2
   maxHitpoints: 2
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
 --- !u!212 &2039317681
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -132145,6 +132179,7 @@ MonoBehaviour:
   hitPoints: 8
   maxHitpoints: 8
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.5
   xSpeed: 0.75
   sizeX: 1
@@ -132165,7 +132200,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0002824217, y: -0.016679592}
+  m_Offset: {x: -0.0014617443, y: -0.018659}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132176,7 +132211,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09917393, y: 0.15393816}
+  m_Size: {x: 0.08109331, y: 0.07704282}
   m_EdgeRadius: 0
 --- !u!212 &2105163250
 SpriteRenderer:
