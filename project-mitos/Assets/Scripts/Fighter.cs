@@ -36,7 +36,7 @@ public class Fighter : MonoBehaviour
         }*/
         if (isImmune)
         {
-            gameObject.layer = LayerMask.NameToLayer("Immune");
+            //gameObject.layer = LayerMask.NameToLayer("Immune");
             Color objectColor = objectRenderer.material.color;
             float fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime)*2;
 

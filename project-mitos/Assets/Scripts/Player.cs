@@ -242,16 +242,4 @@ public class Player : Mover
         projectile.Launch(direction * 4, fireballSpeed);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (isImmune)
-        {
-            if ((collision.collider.tag == "Hitbox") || (collision.gameObject.layer == LayerMask.NameToLayer("Enemy")))
-            {
-                Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
-                Debug.Log("IMMUNE");
-            }
-        }
-    }
-
 }

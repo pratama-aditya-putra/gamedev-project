@@ -786,7 +786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42745641}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CabaiCollectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 73362416}
   - component: {fileID: 73362415}
   - component: {fileID: 73362414}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 79614704}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CabaiCollectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1919,7 +1919,7 @@ GameObject:
   - component: {fileID: 139031855}
   - component: {fileID: 139031854}
   - component: {fileID: 139031853}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51330,7 +51330,7 @@ GameObject:
   - component: {fileID: 327294652}
   - component: {fileID: 327294650}
   - component: {fileID: 327294651}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -51626,7 +51626,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -6752949840835573788, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -53153,7 +53153,7 @@ GameObject:
   - component: {fileID: 435068585}
   - component: {fileID: 435068584}
   - component: {fileID: 435068583}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55709,9 +55709,9 @@ GameObject:
   - component: {fileID: 508124571}
   - component: {fileID: 508124573}
   - component: {fileID: 508124572}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55757,7 +55757,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.015706167}
+  m_Offset: {x: -0.0012431145, y: 0.014877558}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -55768,7 +55768,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09956479, y: 0.088297576}
+  m_Size: {x: 0.15840554, y: 0.20100641}
   m_EdgeRadius: 0
 --- !u!1 &512100370
 GameObject:
@@ -56066,7 +56066,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7050709857446482886, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -56102,7 +56102,7 @@ GameObject:
   - component: {fileID: 538775417}
   - component: {fileID: 538775416}
   - component: {fileID: 538775415}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59930,7 +59930,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7050709857446482886, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -60174,7 +60174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 621856048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BerasCollectible (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60764,6 +60764,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.y
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
@@ -61423,7 +61427,7 @@ GameObject:
   - component: {fileID: 739616680}
   - component: {fileID: 739616678}
   - component: {fileID: 739616679}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -62950,7 +62954,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -6752949840835573788, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -63142,7 +63146,7 @@ GameObject:
   - component: {fileID: 845798094}
   - component: {fileID: 845798093}
   - component: {fileID: 845798092}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63271,6 +63275,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.y
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
@@ -80383,7 +80391,7 @@ GameObject:
   - component: {fileID: 968765765}
   - component: {fileID: 968765763}
   - component: {fileID: 968765764}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -81376,7 +81384,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7050709857446482886, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -81473,6 +81481,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.y
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
@@ -81909,7 +81921,7 @@ GameObject:
   - component: {fileID: 1033309476}
   - component: {fileID: 1033309475}
   - component: {fileID: 1033309474}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushS
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -82241,7 +82253,7 @@ GameObject:
   - component: {fileID: 1051222100}
   - component: {fileID: 1051222099}
   - component: {fileID: 1051222098}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82682,7 +82694,7 @@ GameObject:
   - component: {fileID: 1067764358}
   - component: {fileID: 1067764356}
   - component: {fileID: 1067764357}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -83183,7 +83195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076434198}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BrotowaliCollectible (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83577,7 +83589,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -6752949840835573788, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -83610,7 +83622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1183714637}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BerasCollectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84268,7 +84280,8 @@ GameObject:
   - component: {fileID: 1243066681}
   - component: {fileID: 1243066679}
   - component: {fileID: 1243066678}
-  m_Layer: 6
+  - component: {fileID: 1243066682}
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -84289,32 +84302,27 @@ Transform:
   m_Father: {fileID: 1183714637}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1243066678
-BoxCollider2D:
+--- !u!50 &1243066678
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243066676}
-  m_Enabled: 1
-  m_Density: 1
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.253125, y: 0.20625}
-    newSize: {x: 0.253125, y: 0.20625}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.253125, y: 0.20625}
-  m_EdgeRadius: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &1243066679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84327,7 +84335,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -84409,6 +84417,42 @@ MonoBehaviour:
   pushRecoverySpeed: 0.2
   objectRenderer: {fileID: 0}
   Object: {fileID: 538775413}
+--- !u!66 &1243066682
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243066676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1243066679}
+    m_ColliderPaths:
+    - - X: 1265332
+        Y: -1031250
+      - X: 1265332
+        Y: 1031250
+      - X: -1265625
+        Y: 1030957
+      - X: -1265332
+        Y: -1031250
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.1265039, y: -0.103125}
+      - {x: 0.1265039, y: 0.103125}
+      - {x: -0.1265625, y: 0.1030664}
+      - {x: -0.1265039, y: -0.103125}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!4 &1247301859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3935301046496166172, guid: 69429d5f882a5c045b6d9b50db75230d, type: 3}
@@ -85578,7 +85622,8 @@ GameObject:
   - component: {fileID: 1328413871}
   - component: {fileID: 1328413870}
   - component: {fileID: 1328413869}
-  m_Layer: 6
+  - component: {fileID: 1328413872}
+  m_Layer: 11
   m_Name: BushS
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -85692,6 +85737,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1328413872
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328413867}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1337259072
 GameObject:
   m_ObjectHideFlags: 0
@@ -85992,7 +86058,7 @@ GameObject:
   - component: {fileID: 1347799765}
   - component: {fileID: 1347799764}
   - component: {fileID: 1347799763}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushS
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -122843,7 +122909,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -6752949840835573788, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122993,7 +123059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1417745782}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectibleItems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123113,7 +123179,8 @@ GameObject:
   - component: {fileID: 1438727165}
   - component: {fileID: 1438727163}
   - component: {fileID: 1438727164}
-  m_Layer: 6
+  - component: {fileID: 1438727166}
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -123228,6 +123295,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1438727166
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438727161}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1444475541
 GameObject:
   m_ObjectHideFlags: 0
@@ -123764,7 +123852,7 @@ GameObject:
   - component: {fileID: 1478297901}
   - component: {fileID: 1478297900}
   - component: {fileID: 1478297899}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushS
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -124020,7 +124108,7 @@ GameObject:
   - component: {fileID: 1490857015}
   - component: {fileID: 1490857014}
   - component: {fileID: 1490857013}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124508,7 +124596,8 @@ GameObject:
   - component: {fileID: 1530889163}
   - component: {fileID: 1530889162}
   - component: {fileID: 1530889161}
-  m_Layer: 6
+  - component: {fileID: 1530889164}
+  m_Layer: 11
   m_Name: BushS
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -124623,6 +124712,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1530889164
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530889159}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1542771520
 GameObject:
   m_ObjectHideFlags: 0
@@ -124754,7 +124864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1546638562}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BerasCollectible (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125342,7 +125452,7 @@ GameObject:
   - component: {fileID: 1606911017}
   - component: {fileID: 1606911016}
   - component: {fileID: 1606911015}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollectableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125797,7 +125907,7 @@ GameObject:
   - component: {fileID: 1660009761}
   - component: {fileID: 1660009759}
   - component: {fileID: 1660009760}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -125928,7 +126038,8 @@ GameObject:
   - component: {fileID: 1666518432}
   - component: {fileID: 1666518430}
   - component: {fileID: 1666518431}
-  m_Layer: 6
+  - component: {fileID: 1666518433}
+  m_Layer: 11
   m_Name: BushL
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -126042,6 +126153,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1666518433
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666518428}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1677963438
 GameObject:
   m_ObjectHideFlags: 0
@@ -126989,7 +127121,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -6752949840835573788, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127453,7 +127585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1744789758}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BerasCollectible (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128049,7 +128181,7 @@ GameObject:
   - component: {fileID: 1790706701}
   - component: {fileID: 1790706700}
   - component: {fileID: 1790706699}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushS
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -130043,7 +130175,7 @@ GameObject:
   - component: {fileID: 1924440043}
   - component: {fileID: 1924440042}
   - component: {fileID: 1924440041}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BushS
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -130886,6 +131018,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.16
       objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -131428,7 +131564,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7050709857446482886, guid: ce039545c7f78ee4cbf2f59b303cfa2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7764706, b: 0.42352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -131503,7 +131639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d0b28ad8ad71f42b831c3cebff62ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Jungle 1
+  sceneName: Underwater
 --- !u!61 &2046620821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132515,7 +132651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2123934866}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BrotowaliCollectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
