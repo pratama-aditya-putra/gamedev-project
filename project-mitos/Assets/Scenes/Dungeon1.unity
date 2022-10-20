@@ -110892,7 +110892,7 @@ GameObject:
   - component: {fileID: 84630226}
   - component: {fileID: 84630225}
   - component: {fileID: 84630224}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tuyul (2)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -110974,7 +110974,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0013275146, y: -0.0045719147}
+  m_Offset: {x: -0.003745079, y: 0.0038824081}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110985,7 +110985,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3553772, y: 0.58128357}
+  m_Size: {x: 0.2775917, y: 0.46291542}
   m_EdgeRadius: 0
 --- !u!212 &84630227
 SpriteRenderer:
@@ -111183,7 +111183,7 @@ GameObject:
   - component: {fileID: 89563005}
   - component: {fileID: 89563004}
   - component: {fileID: 89563003}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pocong (6)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -111265,7 +111265,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007606268, y: -0.5036888}
+  m_Offset: {x: -0.0025110245, y: -0.45528984}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -111276,7 +111276,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5931916, y: 1.0089035}
+  m_Size: {x: 0.49130058, y: 0.78983307}
   m_EdgeRadius: 0
 --- !u!212 &89563006
 SpriteRenderer:
@@ -111340,9 +111340,9 @@ GameObject:
   - component: {fileID: 95456958}
   - component: {fileID: 95456960}
   - component: {fileID: 95456959}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111691,7 +111691,7 @@ GameObject:
   - component: {fileID: 176362952}
   - component: {fileID: 176362951}
   - component: {fileID: 176362950}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tuyul (1)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -111773,7 +111773,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0013275146, y: -0.0045719147}
+  m_Offset: {x: -0.0020546913, y: 0.0038833618}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111784,7 +111784,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3553772, y: 0.58128357}
+  m_Size: {x: 0.2945013, y: 0.45614624}
   m_EdgeRadius: 0
 --- !u!212 &176362953
 SpriteRenderer:
@@ -120203,9 +120203,9 @@ GameObject:
   - component: {fileID: 325550260}
   - component: {fileID: 325550262}
   - component: {fileID: 325550261}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120277,7 +120277,7 @@ GameObject:
   - component: {fileID: 327666821}
   - component: {fileID: 327666820}
   - component: {fileID: 327666819}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pocong (1)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -120359,7 +120359,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007606268, y: -0.5036888}
+  m_Offset: {x: -0.0076065063, y: -0.45256162}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -120370,7 +120370,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5931916, y: 1.0089035}
+  m_Size: {x: 0.5014858, y: 0.78437567}
   m_EdgeRadius: 0
 --- !u!212 &327666822
 SpriteRenderer:
@@ -121129,7 +121129,7 @@ GameObject:
   - component: {fileID: 466219954}
   - component: {fileID: 466219953}
   - component: {fileID: 466219952}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pocong (2)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -121211,7 +121211,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007606268, y: -0.5036888}
+  m_Offset: {x: -0.0025100708, y: -0.45528913}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -121222,7 +121222,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5931916, y: 1.0089035}
+  m_Size: {x: 0.49129868, y: 0.7694526}
   m_EdgeRadius: 0
 --- !u!212 &466219955
 SpriteRenderer:
@@ -124171,9 +124171,9 @@ GameObject:
   - component: {fileID: 693603437}
   - component: {fileID: 693603439}
   - component: {fileID: 693603438}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124289,9 +124289,9 @@ GameObject:
   - component: {fileID: 778612398}
   - component: {fileID: 778612400}
   - component: {fileID: 778612399}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124484,9 +124484,9 @@ GameObject:
   - component: {fileID: 877933408}
   - component: {fileID: 877933410}
   - component: {fileID: 877933409}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124558,7 +124558,7 @@ GameObject:
   - component: {fileID: 882287707}
   - component: {fileID: 882287706}
   - component: {fileID: 882287705}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pocong (5)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -124640,7 +124640,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007606268, y: -0.5036888}
+  m_Offset: {x: -0.0025117397, y: -0.4578371}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -124651,7 +124651,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5931916, y: 1.0089035}
+  m_Size: {x: 0.50148726, y: 0.7949276}
   m_EdgeRadius: 0
 --- !u!212 &882287708
 SpriteRenderer:
@@ -125125,7 +125125,7 @@ GameObject:
   - component: {fileID: 1056977814}
   - component: {fileID: 1056977813}
   - component: {fileID: 1056977812}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pocong (4)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -125207,7 +125207,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007606268, y: -0.5036888}
+  m_Offset: {x: 0.002583027, y: -0.44255257}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -125218,7 +125218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5931916, y: 1.0089035}
+  m_Size: {x: 0.5218668, y: 0.7643547}
   m_EdgeRadius: 0
 --- !u!212 &1056977815
 SpriteRenderer:
@@ -125512,9 +125512,9 @@ GameObject:
   - component: {fileID: 1242442124}
   - component: {fileID: 1242442126}
   - component: {fileID: 1242442125}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126418,7 +126418,7 @@ GameObject:
   - component: {fileID: 1467977935}
   - component: {fileID: 1467977934}
   - component: {fileID: 1467977933}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pocong (3)
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -126500,7 +126500,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007606268, y: -0.5036888}
+  m_Offset: {x: 0.0025835037, y: -0.46293116}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -126511,7 +126511,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5931916, y: 1.0089035}
+  m_Size: {x: 0.50148964, y: 0.7847376}
   m_EdgeRadius: 0
 --- !u!212 &1467977936
 SpriteRenderer:
@@ -126577,7 +126577,7 @@ GameObject:
   - component: {fileID: 1486945843}
   - component: {fileID: 1486945842}
   - component: {fileID: 1486945841}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tuyul
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -126659,7 +126659,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0013275146, y: -0.0045719147}
+  m_Offset: {x: -0.0020542145, y: 0.0038833618}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -126670,7 +126670,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3553772, y: 0.58128357}
+  m_Size: {x: 0.28097343, y: 0.45615005}
   m_EdgeRadius: 0
 --- !u!212 &1486945844
 SpriteRenderer:
@@ -127302,9 +127302,9 @@ GameObject:
   - component: {fileID: 1763603323}
   - component: {fileID: 1763603325}
   - component: {fileID: 1763603324}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127554,9 +127554,9 @@ GameObject:
   - component: {fileID: 1791380999}
   - component: {fileID: 1791381001}
   - component: {fileID: 1791381000}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127602,7 +127602,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045602202, y: -1.152447}
+  m_Offset: {x: 2.901174, y: -1.6778669}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127613,7 +127613,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.1472054, y: 5.1909537}
+  m_Size: {x: 3.0455065, y: 1.947031}
   m_EdgeRadius: 0
 --- !u!1 &1793107647
 GameObject:
@@ -130956,9 +130956,9 @@ GameObject:
   - component: {fileID: 2064502004}
   - component: {fileID: 2064502006}
   - component: {fileID: 2064502005}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131028,9 +131028,9 @@ GameObject:
   - component: {fileID: 2065304650}
   - component: {fileID: 2065304652}
   - component: {fileID: 2065304651}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131102,7 +131102,7 @@ GameObject:
   - component: {fileID: 2068760024}
   - component: {fileID: 2068760023}
   - component: {fileID: 2068760022}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pocong
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -139568,7 +139568,7 @@ GameObject:
   - component: {fileID: 2144982754}
   - component: {fileID: 2144982755}
   - component: {fileID: 2144982756}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Butoijo
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -139709,7 +139709,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.047698617, y: -1.1500103}
+  m_Offset: {x: 0.26471996, y: -1.27565}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139720,7 +139720,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.0775137, y: 5.2159877}
+  m_Size: {x: 2.4046993, y: 4.2793655}
   m_EdgeRadius: 0
 --- !u!50 &2144982756
 Rigidbody2D:

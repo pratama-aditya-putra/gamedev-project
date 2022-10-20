@@ -27941,7 +27941,7 @@ GameObject:
   - component: {fileID: 767854906}
   - component: {fileID: 767854910}
   - component: {fileID: 767854911}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: NyiBlorong
   m_TagString: Fighter
   m_Icon: {fileID: 0}
@@ -28046,7 +28046,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0004963875, y: -0.053237677}
+  m_Offset: {x: 0.003169112, y: -0.038575783}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -28057,7 +28057,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09073925, y: 0.25911856}
+  m_Size: {x: 0.07461102, y: 0.22979477}
   m_EdgeRadius: 0
 --- !u!114 &767854910
 MonoBehaviour:
@@ -34162,9 +34162,9 @@ GameObject:
   - component: {fileID: 995374821}
   - component: {fileID: 995374823}
   - component: {fileID: 995374822}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: HitBox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34210,7 +34210,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00028777122, y: -0.05208707}
+  m_Offset: {x: -0.013640989, y: -0.024962649}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -34221,7 +34221,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09086466, y: 0.25924253}
+  m_Size: {x: 0.15097809, y: 0.31349137}
   m_EdgeRadius: 0
 --- !u!1 &1006436047
 GameObject:
