@@ -30267,6 +30267,7 @@ MonoBehaviour:
   hitPoints: 60
   maxHitpoints: 60
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.7
   xSpeed: 0.9
   sizeX: 0.8
@@ -30543,6 +30544,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e84bdc493284245448762a65e11c3a60, type: 3}
   - {fileID: 21300000, guid: 02ee1021bf34ea243abbf92b55f6d827, type: 3}
   - {fileID: -5206644523654691916, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
+  itemsName: []
   potion: {fileID: 1897527828}
 --- !u!224 &842965339
 RectTransform:
@@ -30628,7 +30630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: pesoAmount
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
@@ -31002,6 +31004,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 1
@@ -31014,8 +31017,10 @@ MonoBehaviour:
   manaRecoverySpeed: 1.5
   lastManaRecovery: 0
   fireballManaCost: 3
+  fireballSpeed: 0
   fireSoundEffect: {fileID: 0}
   slashSoundEffect: {fileID: 0}
+  hurtSoundEffect: {fileID: 0}
 --- !u!50 &920393870
 Rigidbody2D:
   serializedVersion: 4
@@ -36269,7 +36274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: pesoAmount
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
@@ -53275,6 +53280,7 @@ MonoBehaviour:
   hud: {fileID: 731124264}
   menu: {fileID: 1358496590}
   transition: {fileID: 445605490}
+  pauseButton: {fileID: 0}
   alive: 0
   peso: 15
   experience: 0

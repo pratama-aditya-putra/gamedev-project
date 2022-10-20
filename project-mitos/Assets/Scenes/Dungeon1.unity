@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: pesoAmount
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
 --- !u!1 &3184685 stripped
@@ -110946,6 +110950,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -111236,6 +111241,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -111743,6 +111749,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -112106,6 +112113,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: pesoAmount
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
@@ -120324,6 +120335,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -120473,6 +120485,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: pesoAmount
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
@@ -120725,6 +120741,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: pesoAmount
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
 --- !u!4 &400071396 stripped
@@ -120957,6 +120977,7 @@ MonoBehaviour:
   hitPoints: 30
   maxHitpoints: 30
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 0.75
   sizeX: 1.5
@@ -121166,6 +121187,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -124594,6 +124616,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -124943,6 +124966,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: pesoAmount
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
 --- !u!4 &950484512 stripped
@@ -125156,6 +125183,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -125739,9 +125767,9 @@ GameObject:
   - component: {fileID: 1306805457}
   - component: {fileID: 1306805459}
   - component: {fileID: 1306805458}
-  m_Layer: 7
+  m_Layer: 15
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125961,6 +125989,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: pesoAmount
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
@@ -126290,6 +126322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: pesoAmount
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
 --- !u!4 &1448223039 stripped
@@ -126440,6 +126476,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -126598,6 +126635,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -131107,6 +131145,7 @@ MonoBehaviour:
   hitPoints: 10
   maxHitpoints: 10
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.75
   xSpeed: 1
   sizeX: 0.25
@@ -131130,7 +131169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007606268, y: -0.5036888}
+  m_Offset: {x: -0.00015068054, y: -0.45646954}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -131141,7 +131180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5931916, y: 1.0089035}
+  m_Size: {x: 0.4987526, y: 0.76535225}
   m_EdgeRadius: 0
 --- !u!212 &2068760025
 SpriteRenderer:
@@ -139636,6 +139675,7 @@ MonoBehaviour:
   hitPoints: 40
   maxHitpoints: 40
   pushRecoverySpeed: 0.2
+  objectRenderer: {fileID: 0}
   ySpeed: 0.55
   xSpeed: 0.7
   sizeX: 0.1

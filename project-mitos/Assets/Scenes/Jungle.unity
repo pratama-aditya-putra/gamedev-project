@@ -63405,7 +63405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: pesoAmount
-      value: 100
+      value: 175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
@@ -83526,7 +83526,7 @@ MonoBehaviour:
   - {fileID: -5574873882498854606, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
   - {fileID: -9052792337493064725, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
   - {fileID: -7870807981238829915, guid: 5b5e3c186468e844da6dfb54ccafc76f, type: 3}
-  weaponPrices: 14000000230000003c0000006400000096000000e6000000
+  weaponPrices: c80000005e0100009001000058020000ee02000084030000
   expTable: 0a0000000f0000001900000023000000320000003c00000050000000640000007800000096000000
   inventory: {fileID: 2138737781}
   player: {fileID: 603885995}
@@ -131720,7 +131720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725567740980768997, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: pesoAmount
-      value: 100
+      value: 175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
