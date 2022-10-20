@@ -99,7 +99,7 @@ public class CharacterMenu : MonoBehaviour
         {
             inventoryItem[i].gameObject.SetActive(false);
         }
-        Debug.Log(GameManager.instance.inventory.GetItemList().Count);
+        //Debug.Log(GameManager.instance.inventory.GetItemList().Count);
         for (int i = 0; i < GameManager.instance.inventory.GetItemList().Count; i++)
         {
             inventoryItem[i].itemId = GameManager.instance.inventory.GetItemList()[i].itemId;

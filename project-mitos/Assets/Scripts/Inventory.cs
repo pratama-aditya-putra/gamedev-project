@@ -23,6 +23,8 @@ public class Inventory : MonoBehaviour
     //Add and remove item
     public void AddItem(Item newItem)
     {
+
+        Debug.Log(newItem.amount);
         for (int i = 0; i < itemList.Count; i++)
         {
             if (itemList[i].itemId == newItem.itemId)
@@ -31,7 +33,7 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
-        itemList.Add(newItem);
+         itemList.Add(new Item { itemId = newItem.itemId, amount = newItem.amount, itemName = newItem.itemName });
     }
 
     public List<Item> GetItemList()
@@ -54,6 +56,19 @@ public class Inventory : MonoBehaviour
                 {
                     itemList.RemoveAt(i);
                 }
+            }
+        }
+    }
+    public void RemoveItem(Item redItem, int Amount)
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if (itemList[i].itemId == redItem.itemId)
+            {
+                itemList[i].amount -= Amount;
+                if(itemList[i].amount <= 0)
+                    itemList.RemoveAt(i);
+                return;
             }
         }
     }

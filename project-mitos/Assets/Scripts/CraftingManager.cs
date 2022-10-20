@@ -16,6 +16,8 @@ public class CraftingManager : MonoBehaviour
     public Slot resultSlot;
     public List<Item> inventoryItem;
     public List<Text> inventoryItemAmount;
+    public List<Text> craftingItemAmount;
+    public Text craftingResultAmount;
 
     private void Start()
     {
@@ -44,7 +46,8 @@ public class CraftingManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        int amountItem;
+        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
         {
             if(currentItem != null)
             {
@@ -70,12 +73,18 @@ public class CraftingManager : MonoBehaviour
                 nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
                 nearestSlot.item.itemName = currentItem.itemName;
                 nearestSlot.item.itemId = currentItem.itemId;
-                nearestSlot.item.amount = 1;
+                amountItem = currentItem.amount;
+                if (Input.GetMouseButtonUp(1))
+                    if(amountItem > 1)
+                        amountItem /= 2;
+                nearestSlot.item.amount = amountItem;
                 Debug.Log(nearestSlot.item);
                 itemLists[nearestSlot.index] = nearestSlot.item;
+                craftingItemAmount[nearestSlot.index].text = nearestSlot.item.amount.ToString();
                 CheckForCreatedRecipes();
                 currentItem = null;
-                GameManager.instance.inventory.RemoveItem(nearestSlot.item);
+                //GameManager.instance.inventory.RemoveItem(nearestSlot.item);
+                GameManager.instance.inventory.RemoveItem(nearestSlot.item, amountItem);
 
                 UpdateInventory();
             }
@@ -120,11 +129,19 @@ public class CraftingManager : MonoBehaviour
         slot.item = null;
         for(int i = 0; i < 4; i++)
         {
-            itemLists[i] = null;
-            craftingSlots[i].item.itemId = 0;
-            craftingSlots[i].item.itemName = "";
-            craftingSlots[i].item.amount = 0;
-            craftingSlots[i].gameObject.SetActive(false);
+            if (craftingSlots[i].item.amount > 1)
+            {
+                craftingSlots[i].item.amount--;
+                craftingItemAmount[i].text = craftingSlots[i].item.amount.ToString();
+            }
+            else
+            {
+                itemLists[i] = null;
+                craftingSlots[i].item.itemId = 0;
+                craftingSlots[i].item.itemName = "";
+                craftingSlots[i].item.amount = 0;
+                craftingSlots[i].gameObject.SetActive(false);
+            }
         }
         slot.gameObject.SetActive(false);
         UpdateInventory();

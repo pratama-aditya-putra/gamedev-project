@@ -62,6 +62,7 @@ public class Player : Mover
     protected override void Death()
     {
         isAlive = false;
+        Time.timeScale = 0.0f;
         GameManager.instance.deathMenuAnim.SetTrigger("Show");
         GameManager.instance.SaveState();
     }

@@ -181,6 +181,7 @@ public class GameManager : MonoBehaviour
     public void Respawn()
     {
         deathMenuAnim.SetTrigger("Hide");
+        Time.timeScale = 1.0f;
         transition.GetComponent<Animator>().SetTrigger("In");
         Scene scene = SceneManager.GetActiveScene();
         if(scene.name == "Jungle" || scene.name == "Jungle 1")
