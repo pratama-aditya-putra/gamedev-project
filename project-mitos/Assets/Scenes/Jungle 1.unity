@@ -27946,7 +27946,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Name
-      value: ChestJungle_
+      value: ChestJungle_(2)
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.x

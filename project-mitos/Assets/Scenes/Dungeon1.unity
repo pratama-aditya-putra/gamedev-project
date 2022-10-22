@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.16
       objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -112139,6 +112143,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.16
       objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -120508,6 +120516,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.16
       objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -120774,6 +120786,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.y
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
@@ -125090,7 +125106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Name
-      value: ChestDungeon_
+      value: ChestDungeon_(7)
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.x
@@ -125099,6 +125115,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.y
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
@@ -126149,6 +126169,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.16
       objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -126516,6 +126540,10 @@ PrefabInstance:
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.y
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709445, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_RootOrder
@@ -140277,7 +140305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b116b4c06545748800f4bca53c1570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 9086813840828669223}
 --- !u!4 &445466390394536919
 Transform:
   m_ObjectHideFlags: 0
@@ -140576,7 +140604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b116b4c06545748800f4bca53c1570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 7486681483969897572}
 --- !u!1 &2011555107408363098
 GameObject:
   m_ObjectHideFlags: 0
@@ -140590,7 +140618,7 @@ GameObject:
   - component: {fileID: 5229161294202983002}
   - component: {fileID: 5455320238023591834}
   m_Layer: 0
-  m_Name: ItemTemulawakDungeon_
+  m_Name: ItemTemulawakDungeon_(4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140871,7 +140899,7 @@ GameObject:
   - component: {fileID: 8398218534039719715}
   - component: {fileID: 8622407454310767331}
   m_Layer: 0
-  m_Name: ItemAsamDungeon_
+  m_Name: ItemAsamDungeon_(4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140890,7 +140918,7 @@ GameObject:
   - component: {fileID: 8926292483545760484}
   - component: {fileID: 8702090412487710500}
   m_Layer: 0
-  m_Name: ItemKunyitDungeon_
+  m_Name: ItemKunyitDungeon_(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141200,7 +141228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b116b4c06545748800f4bca53c1570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 6051668650211113386}
 --- !u!1 &3475716458042088316
 GameObject:
   m_ObjectHideFlags: 0
@@ -141544,7 +141572,7 @@ GameObject:
   - component: {fileID: 7738191879964486195}
   - component: {fileID: 7513994447446474739}
   m_Layer: 0
-  m_Name: ItemKencurDungeon_
+  m_Name: ItemKencurDungeon_(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142516,7 +142544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b116b4c06545748800f4bca53c1570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 2033469755481332457}
 --- !u!1 &6959995610611368513
 GameObject:
   m_ObjectHideFlags: 0
@@ -142732,7 +142760,7 @@ GameObject:
   - component: {fileID: 3938691657480035955}
   - component: {fileID: 3858896133236575155}
   m_Layer: 0
-  m_Name: ItemKunyitDungeon_
+  m_Name: ItemKunyitDungeon_(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143508,7 +143536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b116b4c06545748800f4bca53c1570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 479264482639814168}
 --- !u!61 &8926292483545760484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143673,7 +143701,7 @@ GameObject:
   - component: {fileID: 3207820864344413247}
   - component: {fileID: 3432022961597465087}
   m_Layer: 6
-  m_Name: ItemSambilotoDungeon_
+  m_Name: ItemSambilotoDungeon_(5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

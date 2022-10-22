@@ -32,6 +32,8 @@ public class BossButoIjo : Enemy
             itemReward.gameObject.SetActive(true);
             bossHpBar.localScale = Vector3.one;
             bossHUD.gameObject.SetActive(false);
+            if (trap1 != null)
+                trap1.gameObject.SetActive(false);
             isAlive = false;
         }
     }
@@ -82,7 +84,8 @@ public class BossButoIjo : Enemy
         GameManager.instance.deadEnemies += gameObject.name + "|";
         portal.gameObject.SetActive(true);
         peti.gameObject.SetActive(true);
-        trap1.gameObject.SetActive(true);
+        if(trap1 != null)
+            trap1.gameObject.SetActive(false);
         itemReward.gameObject.SetActive(true);
         bossHpBar.localScale = Vector3.one;
         bossHUD.gameObject.SetActive(false);

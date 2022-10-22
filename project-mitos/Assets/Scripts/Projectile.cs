@@ -59,7 +59,7 @@ public class Projectile : Collidable
                 pushForce = pushForce
             };
 
-            coll.SendMessage("ReceiveDamage", dmg); ;
+            coll.SendMessage("ReceiveDamage", dmg);
         }
 
     }
