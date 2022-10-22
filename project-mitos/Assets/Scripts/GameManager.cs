@@ -205,12 +205,12 @@ public class GameManager : MonoBehaviour
         string s = "";
 
         s += "0" + "|";
-        //s += peso.ToString() + "|";
-        //s += experience.ToString() + "|";
-        //s += weapon.weaponLevel.ToString() + "|";
-        s += "1000|";
-        s += "500|";
-        s += "6|";
+        s += peso.ToString() + "|";
+        s += experience.ToString() + "|";
+        s += weapon.weaponLevel.ToString() + "|";
+        //s += "1000|";
+        //s += "500|";
+        //s += "6|";
         if(inventory.potion.itemId != 0)
         {
             PlayerPrefs.SetString("EquippedPotion", inventory.potion.itemId.ToString() + inventory.potion.amount.ToString());
