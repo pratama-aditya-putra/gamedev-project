@@ -23,6 +23,7 @@ public class CharacterMenu : MonoBehaviour
     private void Start()
     {
         UpdateMenu();
+        GameManager.instance.inventory.potion = potionSlots.item;
     }
 
     private void Update()
@@ -34,30 +35,37 @@ public class CharacterMenu : MonoBehaviour
                 costumCursor.gameObject.SetActive(false);
                 if(currentItem.itemId > 2000)
                 {
-                    Slot nearestSlot = null;
-                    nearestSlot = potionSlots;
-                    nearestSlot.item.gameObject.SetActive(true);
-                    nearestSlot.item.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-                    if (nearestSlot.item.itemId != 0)
-                    {
-                        if (nearestSlot.item.itemId == currentItem.itemId)
-                            nearestSlot.item.amount += currentItem.amount;
-                    }
-                    else if(nearestSlot.item.itemId == 0)
-                    {
-                        nearestSlot.item.itemId = currentItem.itemId;
-                        nearestSlot.item.itemName = currentItem.itemName;
-                        nearestSlot.item.amount = currentItem.amount;
-                    }
-                    potionAmount.text = nearestSlot.item.amount.ToString();
-
-                    for (int i=0;i< currentItem.amount; i++)
-                        GameManager.instance.inventory.RemoveItem(nearestSlot.item);
+                    SetPotion(currentItem, true);
                     UpdateMenu();
                 }
             }
             currentItem = null;
         }
+    }
+
+    //True only if the item came from inventory to potion slot
+    //False if item came from other object such as game manager
+    public void SetPotion(Item myItem, bool Remov)
+    {
+        Slot nearestSlot = null;
+        nearestSlot = potionSlots;
+        nearestSlot.item.gameObject.SetActive(true);
+        nearestSlot.item.GetComponent<Image>().sprite = GameManager.instance.inventory.GetItemIcon(myItem.itemId);
+        if (nearestSlot.item.itemId != 0)
+        {
+            if (nearestSlot.item.itemId == myItem.itemId)
+                nearestSlot.item.amount += myItem.amount;
+        }
+        else if (nearestSlot.item.itemId == 0)
+        {
+            nearestSlot.item.itemId = myItem.itemId;
+            nearestSlot.item.itemName = myItem.itemName;
+            nearestSlot.item.amount = myItem.amount;
+        }
+        potionAmount.text = nearestSlot.item.amount.ToString();
+
+        if(Remov)
+            GameManager.instance.inventory.RemoveItem(nearestSlot.item, myItem.amount);
     }
 
     public void OnClickSlot(Slot slot)

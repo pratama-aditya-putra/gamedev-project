@@ -23,8 +23,6 @@ public class Inventory : MonoBehaviour
     //Add and remove item
     public void AddItem(Item newItem)
     {
-
-        Debug.Log(newItem.amount);
         for (int i = 0; i < itemList.Count; i++)
         {
             if (itemList[i].itemId == newItem.itemId)
@@ -78,14 +76,14 @@ public class Inventory : MonoBehaviour
         if (itemId < 2000)
             return itemsIcon[itemId - 1001];
         else
-            return itemsIcon[itemId - 2001 + 3];
+            return itemsIcon[itemId - 2001 + 8];
     }
     public string GetItemName(int itemId)
     {
         if (itemId < 2000)
             return itemsName[itemId - 1001];
         else
-            return itemsName[itemId - 2001 + 3];
+            return itemsName[itemId - 2001 + 8];
     }
 
 }

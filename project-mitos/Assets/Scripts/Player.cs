@@ -196,7 +196,7 @@ public class Player : Mover
 
     public void OnLevelUp()
     {
-        maxHitpoints += 2;
+        maxHitpoints += 3;
         hitPoints = maxHitpoints;
         maxMana += 3;
         Mana = maxMana;

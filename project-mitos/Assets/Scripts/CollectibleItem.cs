@@ -20,6 +20,7 @@ public class CollectibleItem : Colletible
         {
             collected = true;
             item.amount = 1;
+            GameManager.instance.collectedItems += gameObject.name;
             GameManager.instance.inventory.AddItem(item);
             GameManager.instance.ShowText("+ " + item.itemName, 25, Color.yellow, transform.position, Vector3.up * 30, 0.8f);
             Debug.Log(item.amount);

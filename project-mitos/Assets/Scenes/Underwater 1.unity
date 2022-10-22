@@ -30264,15 +30264,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d845f449289da40a86b3d8c1ca8be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 60
-  maxHitpoints: 60
+  hitPoints: 100
+  maxHitpoints: 100
   pushRecoverySpeed: 0.2
   objectRenderer: {fileID: 0}
   ySpeed: 0.7
   xSpeed: 0.9
   sizeX: 0.8
   sizeY: 0.8
-  xpValue: 1
+  xpValue: 100
   triggerRange: 2
   chaseLength: 5
   attackRange: 0.3
@@ -36088,7 +36088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d302a14ade19046b2221c286235536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 4
   pushForce: 6
 --- !u!61 &995374823
 BoxCollider2D:

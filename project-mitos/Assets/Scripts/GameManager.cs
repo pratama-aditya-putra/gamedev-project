@@ -211,6 +211,15 @@ public class GameManager : MonoBehaviour
         s += "1000|";
         s += "500|";
         s += "6|";
+        if(inventory.potion.itemId != 0)
+        {
+            PlayerPrefs.SetString("EquippedPotion", inventory.potion.itemId.ToString() + inventory.potion.amount.ToString());
+        }
+        else
+        {
+            PlayerPrefs.SetString("EquippedPotion", "");
+        }
+
         foreach (Item item in inventory.GetItemList())
         {
             s += item.itemId.ToString();
@@ -252,10 +261,10 @@ public class GameManager : MonoBehaviour
     public void LoadState(Scene s, LoadSceneMode mode)
     {
         Debug.Log("Loaded");
-        //PlayerPrefs.SetString("DeadEnemies", "");
+        PlayerPrefs.SetString("DeadEnemies", "");
         //deadEnemies = PlayerPrefs.GetString("DeadEnemies");
         //Debug.Log(PlayerPrefs.GetString("DeadEnemies"));
-        //PlayerPrefs.SetString("CollectedItems", "");
+        PlayerPrefs.SetString("CollectedItems", "");
         //collectedItems = PlayerPrefs.GetString("CollectedItems");
         // Debug.Log(PlayerPrefs.GetString("CollectedItems"));
         deadEnemies = "";
@@ -281,15 +290,28 @@ public class GameManager : MonoBehaviour
         //Inventory
         int itemId;
         int itemAmount;
-        if(data.Length >= 4)
+        if((data.Length >= 4)&&(data[4] != ""))
         {
-            for (int i = 4; i < data.Length; i += 4)
+            Debug.Log(data.Length);
+            for (int i = 4; i < data.Length - 1; i++)
             {
                 itemId = int.Parse(data[i].Substring(0, 4));
                 itemAmount = int.Parse(data[i].Substring(4, 1));
                 inventory.AddItem(new Item { itemId = itemId, amount = itemAmount, itemName = inventory.GetItemName(itemId) });
                 Debug.Log(itemAmount + " " + itemId);
+
             }
+        }
+
+        if (!PlayerPrefs.HasKey("EquippedPotion"))
+            return;
+
+        if(PlayerPrefs.GetString("EquippedPotion") != "")
+        {
+            itemId = int.Parse(PlayerPrefs.GetString("EquippedPotion").Substring(0, 4));
+            itemAmount = int.Parse(PlayerPrefs.GetString("EquippedPotion").Substring(4, 1));
+            inventory.potion = new Item { itemId = itemId, amount = itemAmount, itemName = inventory.GetItemName(itemId) };
+            menu.GetComponent<CharacterMenu>().SetPotion(inventory.potion, false);
         }
 
         /*

@@ -45,6 +45,9 @@ public class Crate : Fighter
         GameManager.instance.deadEnemies += gameObject.name + "|";
         Destroy(gameObject);
         if(rewardItem != null)
+        {
+            Debug.Log(rewardItem);
             rewardItem.SetActive(true);
+        }
     }
 }

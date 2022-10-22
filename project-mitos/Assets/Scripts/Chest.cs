@@ -25,7 +25,7 @@ public class Chest : Colletible
             GameManager.instance.collectedItems += gameObject.name;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
             GameManager.instance.peso += pesoAmount;
-            GameManager.instance.ShowText("+" + pesoAmount + " rupiah!",25,Color.yellow,transform.position,Vector3.up * 50,0.8f);
+            GameManager.instance.ShowText("+" + pesoAmount + " Rupiah!",25,Color.yellow,transform.position,Vector3.up * 50,0.8f);
         }
     }
 }
