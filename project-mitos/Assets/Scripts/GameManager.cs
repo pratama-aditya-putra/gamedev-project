@@ -261,12 +261,12 @@ public class GameManager : MonoBehaviour
     public void LoadState(Scene s, LoadSceneMode mode)
     {
         Debug.Log("Loaded");
-        PlayerPrefs.SetString("DeadEnemies", "");
+        //PlayerPrefs.SetString("DeadEnemies", "");
         //deadEnemies = PlayerPrefs.GetString("DeadEnemies");
         //Debug.Log(PlayerPrefs.GetString("DeadEnemies"));
-        PlayerPrefs.SetString("CollectedItems", "");
+        //PlayerPrefs.SetString("CollectedItems", "");
         //collectedItems = PlayerPrefs.GetString("CollectedItems");
-        // Debug.Log(PlayerPrefs.GetString("CollectedItems"));
+        //Debug.Log(PlayerPrefs.GetString("CollectedItems"));
         deadEnemies = "";
         collectedItems = "";
         transition.GetComponent<Animator>().SetTrigger("In");
