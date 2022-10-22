@@ -140198,8 +140198,8 @@ MonoBehaviour:
   maxHitpoints: 50
   pushRecoverySpeed: 0.2
   objectRenderer: {fileID: 0}
-  ySpeed: 0.55
-  xSpeed: 0.7
+  ySpeed: 0.45
+  xSpeed: 0.6
   sizeX: 0.1
   sizeY: 0.1
   xpValue: 50

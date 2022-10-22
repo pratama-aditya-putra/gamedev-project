@@ -169,7 +169,21 @@ public class GameManager : MonoBehaviour
         if (inventory.potion.itemId == 2001)
             player.Heal(3);
         if (inventory.potion.itemId == 2002)
-            player.Mana += 2;
+            player.Heal(6);
+        if (inventory.potion.itemId == 2003)
+        {
+            if (player.maxMana - player.Mana < 4)
+                player.Mana += player.maxMana;
+            else
+                player.Mana += 4;
+        }
+        if (inventory.potion.itemId == 2004)
+        {
+            if (player.maxMana - player.Mana < 8)
+                player.Mana += player.maxMana;
+            else
+                player.Mana += 8;
+        }
         inventory.potion.amount--;
         if (inventory.potion.amount <= 0)
         {
