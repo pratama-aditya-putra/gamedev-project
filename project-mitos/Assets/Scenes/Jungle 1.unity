@@ -28085,6 +28085,7 @@ MonoBehaviour:
   attackRange: 0.3
   chasing: 0
   attacking: 0
+  animator: {fileID: 0}
   bossHUD: {fileID: 2033800546}
   setBossName: NYI BLORONG
   bossName: {fileID: 490377993}
@@ -28121,7 +28122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: ChestJungle_
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.x
@@ -34322,7 +34323,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Name
-      value: Chest (1)
+      value: ChestJungle_(1)
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_IsActive

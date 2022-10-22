@@ -7,11 +7,12 @@ public class CollectibleItem : Colletible
 {
     public Item item;
 
-   /* protected override void Start()
+    protected override void Start()
     {
         base.Start();
-        GetComponent<SpriteRenderer>().sprite = item.GetComponent<Image>().sprite;
-    }*/
+        if (PlayerPrefs.GetString("CollectedItems").Contains(gameObject.name))
+            Destroy(gameObject);
+    }
 
     protected override void OnCollect()
     {

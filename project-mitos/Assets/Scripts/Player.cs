@@ -55,7 +55,8 @@ public class Player : Mover
             return;
         base.ReceiveDamage(dmg);
         GameManager.instance.OnHitPointChange();
-        hurtSoundEffect.Play();
+        if(!isImmune)
+            hurtSoundEffect.Play();
         isImmune = true;
     }
 

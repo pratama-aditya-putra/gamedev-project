@@ -612,7 +612,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.10204082, y: 0.30612245}
+    oldSize: {x: 0.10638298, y: 0.31914893}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -30278,6 +30278,7 @@ MonoBehaviour:
   attackRange: 0.3
   chasing: 0
   attacking: 0
+  animator: {fileID: 767854906}
   projectilePrefab: {fileID: 677424893868285149, guid: 08f8390d7479e9747935e3897b224cf6, type: 3}
   center: {fileID: 1243952416}
   bossHUD: {fileID: 1827941881}
@@ -30574,7 +30575,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: ChestUnderwater_
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709434, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Size.x
@@ -36214,7 +36215,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_Name
-      value: Chest (1)
+      value: ChestUnderwater_(1)
       objectReference: {fileID: 0}
     - target: {fileID: 1283791482608709433, guid: 966303ffd7ad9e040a1ace15a25aa10a, type: 3}
       propertyPath: m_IsActive
@@ -53282,6 +53283,8 @@ MonoBehaviour:
   transition: {fileID: 445605490}
   pauseButton: {fileID: 0}
   alive: 0
+  deadEnemies: 
+  collectedItems: 
   peso: 15
   experience: 0
 --- !u!114 &1926915819

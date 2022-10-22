@@ -10,15 +10,9 @@ public class Portal : Collidable
         {
             //Teleport Player
             GameManager.instance.SaveState();
-            if (gameObject.name == "PortalMain")
-            {
-                sceneName = "Dungeon1";
-            }
-            if (gameObject.name == "PortalDungeon1")
-            {
-                sceneName = "MainDungeon";
-            }
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+            //GameManager.instance.deadEnemies = "";
+            //GameManager.instance.collectedItems = "";
         }
     }
 }

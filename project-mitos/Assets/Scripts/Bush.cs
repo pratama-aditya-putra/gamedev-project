@@ -12,6 +12,8 @@ public class Bush : Fighter
     protected virtual void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        if (PlayerPrefs.GetString("DeadEnemies").Contains(gameObject.name))
+            Destroy(gameObject);
     }
 
     protected virtual void Update()
@@ -41,6 +43,7 @@ public class Bush : Fighter
 
     protected override void Death()
     {
+        GameManager.instance.deadEnemies += gameObject.name + "|";
         Destroy(gameObject);
         if(Object != null)
             Object.SetActive(true);

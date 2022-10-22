@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         SceneManager.sceneLoaded += OnSceneLoaded;
+        Debug.Log("Awake");
     }
 
     private bool paused;
@@ -46,6 +47,9 @@ public class GameManager : MonoBehaviour
     public GameObject transition;
     public Button pauseButton;
     public bool alive;
+
+    public string deadEnemies = "";
+    public string collectedItems = "";
 
     //Floating text manager
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -156,6 +160,7 @@ public class GameManager : MonoBehaviour
     }
     public void QuitGame()
     {
+        GameManager.instance.SaveState();
         Application.Quit();
     }
 
@@ -200,20 +205,61 @@ public class GameManager : MonoBehaviour
         string s = "";
 
         s += "0" + "|";
-        s += peso.ToString() + "|";
-        s += experience.ToString() + "|";
-        s += weapon.weaponLevel.ToString() + "|";
-        foreach(Item item in inventory.GetItemList())
+        //s += peso.ToString() + "|";
+        //s += experience.ToString() + "|";
+        //s += weapon.weaponLevel.ToString() + "|";
+        s += "1000|";
+        s += "500|";
+        s += "6|";
+        foreach (Item item in inventory.GetItemList())
         {
             s += item.itemId.ToString();
             s += item.amount.ToString() + "|";
         }
 
+        string temp;
+        if(deadEnemies != "")
+        {
+            if (!PlayerPrefs.HasKey("DeadEnemies"))
+                PlayerPrefs.SetString("DeadEnemies", deadEnemies);
+            else
+            {
+                //Debug.Log(PlayerPrefs.GetString("DeadEnemies"));
+                temp = PlayerPrefs.GetString("DeadEnemies");
+                deadEnemies = temp + deadEnemies;
+                PlayerPrefs.SetString("DeadEnemies", deadEnemies);
+                deadEnemies = "";
+            }
+        }
+
+        string temp1;
+        if (collectedItems != "")
+        {
+            if (!PlayerPrefs.HasKey("CollectedItems"))
+                PlayerPrefs.SetString("CollectedItems", collectedItems);
+            else
+            {
+                //Debug.Log(PlayerPrefs.GetString("CollectedItems"));
+                temp1 = PlayerPrefs.GetString("CollectedItems");
+                collectedItems = temp1 + collectedItems;
+                PlayerPrefs.SetString("CollectedItems", collectedItems);
+                collectedItems = "";
+            }
+        }
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("SaveState");
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+        Debug.Log("Loaded");
+        PlayerPrefs.SetString("DeadEnemies", "");
+        //deadEnemies = PlayerPrefs.GetString("DeadEnemies");
+        //Debug.Log(PlayerPrefs.GetString("DeadEnemies"));
+        PlayerPrefs.SetString("CollectedItems", "");
+        //collectedItems = PlayerPrefs.GetString("CollectedItems");
+        // Debug.Log(PlayerPrefs.GetString("CollectedItems"));
+        deadEnemies = "";
+        collectedItems = "";
         transition.GetComponent<Animator>().SetTrigger("In");
         string temp = "";
         SceneManager.sceneLoaded -= LoadState;
@@ -242,6 +288,7 @@ public class GameManager : MonoBehaviour
                 itemId = int.Parse(data[i].Substring(0, 4));
                 itemAmount = int.Parse(data[i].Substring(4, 1));
                 inventory.AddItem(new Item { itemId = itemId, amount = itemAmount, itemName = inventory.GetItemName(itemId) });
+                Debug.Log(itemAmount + " " + itemId);
             }
         }
 

@@ -48,6 +48,11 @@ public class Weapon : Collidable
         }
     }
 
+    public void SetSlashFalse()
+    {
+        slash = false;
+    }
+
     protected override void OnCollide(Collider2D coll)
     {
         if (coll.name == "Collision")

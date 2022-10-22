@@ -7,9 +7,12 @@ public class Crate : Fighter
     private BoxCollider2D boxCollider2D;
     private ContactFilter2D filter;
     private Collider2D[] temp = new Collider2D[10];
+    public GameObject rewardItem;
     protected virtual void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        if (PlayerPrefs.GetString("DeadEnemies").Contains(gameObject.name))
+            Destroy(gameObject);
     }
 
     protected virtual void Update()
@@ -39,6 +42,9 @@ public class Crate : Fighter
 
     protected override void Death()
     {
+        GameManager.instance.deadEnemies += gameObject.name + "|";
         Destroy(gameObject);
+        if(rewardItem != null)
+            rewardItem.SetActive(true);
     }
 }

@@ -17,6 +17,7 @@ public class Enemy : Mover
     private bool collidingWithPlayer;
     private Transform  playerTransform;
     protected Vector3 startingPosition;
+    public Animator animator = null;
 
     //Hitbox
     private ContactFilter2D filter;
@@ -29,6 +30,10 @@ public class Enemy : Mover
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
         hitBox = transform.GetChild(0).GetComponent<BoxCollider2D>();
+        if (gameObject.GetComponent<Animator>() != null)
+            animator = gameObject.GetComponent<Animator>();
+        if (PlayerPrefs.GetString("DeadEnemies").Contains(gameObject.name))
+            Destroy(gameObject);
     }
 
     protected virtual void FixedUpdate()
@@ -38,7 +43,6 @@ public class Enemy : Mover
         {
             if(Vector3.Distance(playerTransform.position, startingPosition) < triggerRange)
                 chasing = true;
-
 
             if (chasing == true)
             {
@@ -78,6 +82,7 @@ public class Enemy : Mover
     protected override void Death()
     {
         Destroy(gameObject);
+        GameManager.instance.deadEnemies += gameObject.name + "|";
         GameManager.instance.experience += xpValue;
         GameManager.instance.ShowText("+" + xpValue +  " xp",30,Color.magenta,transform.position,Vector3.up * 10, 0.5f);
     }
